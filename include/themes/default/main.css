@@ -1,0 +1,1182 @@
+
+/*
+This is the default style for the main body for all pages of the website
+*/
+body {
+
+	font-family: "Arial", sans-serif;
+	font-size: 13px;
+	background-color: white;
+	
+}
+/*
+This is the default style for the table data for all tables of the site
+*/
+ td {
+
+	font-family: "Arial", sans-serif;
+	font-size: 13px;
+	
+}
+
+/*
+form_submit_button is the style for all submit buttons
+*/
+.form_submit_button {
+
+}
+
+/*
+form_reset_button is the style for all reset buttons
+*/
+.form_reset_button {
+
+}
+
+/*
+form_apply_button is the style for the apply button
+*/
+.form_apply_button {
+	background-color: #33FF00;
+
+}
+
+
+
+/*
+Heading 1 - general style
+*/
+H1 {
+
+	font-family: "Arial", sans-serif;
+	font-size: 24pt;
+	font-weight: bold;
+
+
+}
+/*
+Heading 2 - general style
+*/
+H2 {
+
+	font-family: "Arial", sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+
+
+}
+/*
+Heading 3 - general style
+*/
+H3 {
+
+	font-family: "Arial", sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+
+
+}
+
+.available_langs {
+
+
+}
+
+/*
+#############################################
+The following set of styles are for Displaying a job post
+corresponding template file: display-post.php
+#job_post TABLE.job_post - general style for the post displaying table
+
+*/
+
+#job_post TABLE.job_post {
+
+
+}
+
+/*
+#job_post TD.header - the top of the job post table, where the 'go back to job list' 'Save job', and 'email to friend' links are located.
+
+*/
+#job_post TD.header {
+
+	background-color: #808080;
+
+}
+
+/* 'go back to the job list' link */
+#job_post A.go_back {
+
+	color: #ffffff;
+
+}
+/* this post is expired message */
+#job_post .expired_msg {
+
+	color: #E8E8E8;
+	font-weight: bold;
+
+}
+/* 'please mention JB_SITE_NAME when replying to this ad ' */
+#job_post .mention_us_msg {
+
+	color: #E8E8E8;
+	font-weight: bold;
+	font-size: 12pt;
+
+}
+/* The 'description' field form the job post, printed at the top of the form */
+#job_post .post_description {
+
+
+}
+
+
+
+
+/*
+#job_post TD.top_links
+style for the row at the top of the job post.
+template: display-post.php
+*/
+
+#job_post TD.top_links {
+	background-color: #ffffff;
+	font-size: 10pt;
+}
+
+/*
+#job_post H1.job_title
+style for the job post title,
+template: display-post.php
+*/
+#job_post H1.job_title {
+	color: #931b16;
+	font-size: 24pt;
+
+}
+
+/*
+#job_post TD.job_post_body
+The style for displaying the job description cell,
+template: display-post.php
+*/
+#job_post TD.job_post_body {
+	background:#ffffff url(images/background.gif) ;
+
+}
+
+
+/*
+############################################################
+
+#job_post TD.job_post_body
+The table for dsiplaying the job post data,
+template: posting-form.php
+*/
+#job_post TABLE.job_post_data {
+	width: 100%;
+	background-color: #ffffff;
+
+}
+
+#job_post TD.job_post_data {
+	width: 100%;
+	background-color: #ffffff;
+
+}
+
+/* 
+####################################################
+Employer's profile:
+This style is for the table that shows the employer's profile in detail.
+Template: profile-form.php
+*/
+
+#profile,  TABLE.profile_data {
+
+	background-color: #ffffff;
+	width: 100%;
+	border: 2px;
+
+
+}
+
+#profile TD.profile_data {
+	
+	background-color: #Efefed;
+
+}
+
+
+.profile_list_no_result {
+	text-align: center;
+	font-weight: bold;
+
+
+}
+
+/* 
+###########################################################
+Resume :
+This style is for the table that displays a resume in detail.
+Template: resume-form.php
+*/
+
+TABLE.resume_data {
+
+	background-color: #ffffff;
+	width: 90%;
+	border-width: 0px;
+
+
+}
+
+/*
+############################################################
+Dynamic forms
+This set of styles control the display of dynamic forms - forms which can be edited from the Administartion Panel.
+The forms are: Job Posts, Resumes and Employer's profiles.
+
+*/
+
+#dynamic_form, TABLE.dynamic_form {
+	background-color: #d9d9d9;
+	
+	width: 100%;
+	border-bottom-width: 0px;
+
+}
+/*
+TD.dynamic_form_field -
+The name of the field (field label which on the left side)
+*/
+#dynamic_form TD.dynamic_form_field {
+	background-color: #efefef;
+	font-weight: bold;
+	width: 120px;
+	
+
+}
+
+#dynamic_form TD.dynamic_form_2_col_field {
+	background-color: #ffffff;
+	
+
+}
+/*
+#dynamic_form TD.dynamic_form_value
+The value of the field (on the right from the field label)
+*/
+#dynamic_form TD.dynamic_form_value {
+	background-color: #ffffff;
+	
+}
+
+/*
+
+*/
+#dynamic_form .dynamic_form_image_label {
+	
+	font-weight: bold;
+
+}
+
+/*
+
+.dynamic_form_input_label - used for the <label> for radio buttons and check boxes
+*/
+
+#dynamic_form .dynamic_form_input_label {
+	
+	
+
+}
+
+/*
+
+*/
+#dynamic_form .dynamic_form_file_label {
+
+	font-weight: bold;
+	
+
+}
+/*
+The following style controls the LABEL type fields
+*/
+#dynamic_form .dynamic_form_note_label {
+
+
+}
+
+/*
+Date field 
+*/
+#dynamic_form SELECT.dynamic_form_date_style {
+	background-color: #ffffff;
+	
+}
+#dynamic_form INPUT.dynamic_form_date_style {
+	background-color: #ffffff;
+	
+}
+
+#dynamic_form .date_field {
+
+}
+
+/* Other fields */
+#dynamic_form INPUT.dynamic_form_checkbox_style {
+	background-color: #ffffff;
+	
+
+}
+
+#dynamic_form INPUT.dynamic_form_radio_style {
+	background-color: #ffffff;
+	color: #ffffff;
+	
+
+}
+#dynamic_form INPUT.dynamic_form_text_style{
+	background-color: #ffffff;
+	
+
+}
+#dynamic_form TEXTAREA {
+	background-color: #ffffff;
+	
+
+}
+#dynamic_form SELECT {
+	background-color: #ffffff;
+
+}
+
+#dynamic_form .dynamic_form_seperator {
+
+	font-weight: bold;
+
+}
+
+#dynamic_form .is_required_mark {
+
+	font-weight: bold;
+	font-size: 18pt;
+	color: red;
+	vertical-align: middle;
+
+}
+
+
+/*
+########################################
+Search Jobs/Resumes -
+Standard Search form
+
+*/
+
+TABLE.search {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #EDF8FC;
+
+}
+
+
+/* 
+cell for the search field
+*/
+#search_form TD.field {
+	background-color: #EDF8FC;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+/*
+style for the input fields (text)
+*/
+#search_form INPUT.search_input_style {
+	background-color: #ffffff;
+	font-size: 10px;
+	color: #000000;
+	
+	
+}
+
+/*
+style for the input fields (check)
+*/
+#search_form INPUT.search_checkbox_style {
+	background-color: #EDF8FC;
+	font-size: 10px;
+	color: #000000;
+	
+	
+}
+
+/*
+style for the input fields (radio)
+*/
+#search_form INPUT.search_radio_style {
+	background-color: #EDF8FC;
+	font-size: 10px;
+	color: #000000;
+	
+	
+}
+/*
+Select box (drop down / multiple select)
+*/
+#search_form SELECT.search_input_style {
+	background-color: #ffffff;
+	font-size: 10px;
+}
+
+/*
+Date field 
+*/
+#search_form SELECT.search_date_style {
+	background-color: #ffffff;
+	font-size: 10px;
+}
+#search_form INPUT.search_date_style {
+	background-color: #ffffff;
+	font-size: 10px;
+}
+/*
+The labels for the check boxes and radio buttons
+*/
+#search_form .search_input_sel_label {
+	font-size: 10px;
+	white-space: nowrap;
+}
+
+.new_search_link {
+
+	font-weight: bold;
+	
+
+}
+
+#search_form .form_submit_button {
+
+	font-size: 12pt;
+	
+	
+
+
+}
+
+/*
+####################################################
+Job list
+
+*/
+
+#joblist, TABLE.list {
+	background-color: #d9d9d9;
+	width: 99%;
+	font-size: xx-small;
+}
+
+
+#joblist .job_list_small_print {
+	font-family: "Arial", sans-serif;
+	font-size: xx-small;
+	color: #000000;
+
+}
+
+#joblist .job_list_small_print_premium {
+	font-family: "Arial", sans-serif;
+	font-size: xx-small;
+	color: #000000;
+
+}
+
+#joblist .job_list_title {
+	font-family: "Arial", sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #0000FF;
+
+}
+
+#joblist .job_list_title_premium {
+	font-family: "Arial", sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #0000FF;
+
+}
+
+/*
+green_grad and blue_grad define styles for the premium posts
+*/
+
+#joblist .green_grad {
+	background:#fff url(images/green-gradient.gif) repeat-x;
+}
+#joblist .blue_grad {
+	background:#ffffff url(images/blue-gradient.gif) repeat-x;
+}
+
+
+
+#joblist .standard {
+	background-color:white;
+
+}
+
+
+#joblist .job_list_cat_name {
+	font-family: "Arial", sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #339900; 
+
+}
+
+#joblist .job_list_cat_name_premium {
+	font-family: "Arial", sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #339900; 
+
+}
+
+#joblist TD.list_data_cell {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	color: #000000;
+	
+	
+}
+
+#joblist TD.list_data_cell_premium {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	color: #000000;
+	
+	
+}
+
+
+#joblist TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #E9E9E9;
+	color: #000000;
+	white-space: nowrap;
+}
+
+
+
+#joblist TD.list_day_of_week {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: #DDEAF7;
+
+}
+
+#joblist TD.list_day_of_week_premium {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: #DDEAF7;
+
+}
+
+
+
+.job_listing_count {
+
+	margin: 10px;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+.post_list_no_result {
+	font-weight: bold;
+	text-align: center;
+}
+
+.post_list_premium {
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.post_edit_button {
+	font-size: 9pt;
+
+}
+
+.post_delete_button {
+
+	font-size: 9pt;
+
+}
+
+.post_repost_button {
+
+	font-size: 9pt;
+
+}
+
+
+
+/*
+######################################################
+Premium Jobs List 
+
+*/
+
+#joblist_premium, TABLE.list_premium {
+	background-color: #d9d9d9;
+	width: 99%;
+	font-size: xx-small;
+}
+
+
+#joblist_premium .job_list_small_print_premium {
+	font-family: "Arial", sans-serif;
+	font-size: xx-small;
+	color: #000000;
+
+}
+
+#joblist_premium .job_list_title_premium {
+	font-family: "Arial", sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #0000FF;
+
+}
+
+#joblist_premium .green_grad {
+	background:#fff url(images/green-gradient.gif) repeat-x;
+}
+#joblist_premium .blue_grad {
+	background:#FFFFFF url(images/blue-gradient.gif) repeat-x;
+}
+
+#joblist_premium .standard {
+	background-color:white;
+
+}
+
+
+
+#joblist_premium .job_list_cat_name_premium {
+	font-family: "Arial", sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #339900; 
+
+}
+
+#joblist_premium TD.list_data_cell_premium {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	color: #000000;
+	
+	
+}
+
+
+
+
+#joblist_premium TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #E9E9E9;
+	color: #000000;
+	white-space: nowrap;
+
+}
+
+
+
+#joblist_premium TD.list_day_of_week_premium {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000000;
+	background-color: #ECF8F9;
+}
+
+/* 
+####################################################
+Categories
+
+*/
+
+/*
+category_name and category_path are displayed above the categories.
+category name is in big bold letters
+category_path has an indent on the left
+*/
+.category_name { /* The name of the current category*/
+	font-weight: bold;
+	font-size: 14pt;
+
+}
+
+.category_path { /* eg. Job Classification -> Public School -> Middle */
+	margin-left: 2em;
+	
+
+}
+
+.category_index { /* The div element showing the categories, category-index.php template */
+
+	float: none;
+	margin: 2em;
+	
+}
+
+A.cat_parent_link { /* The parent category name */
+
+	
+	font-size: 10pt;
+	font-weight: bold;
+	color: #0000FF;
+
+}
+
+ .cat_subcategory { /* div generated by JB_display_sub_cats_compact() or JB_display_sub_cats_table() */
+	
+	font-size: 9pt;
+	font-weight: normal;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	
+
+}
+
+A.cat_subcategory_link { /* style for the sub category links*/
+
+
+}
+ 
+
+.cat_arrow { /* The little arrow displayed next to the cat_heading */
+	background:  url(images/arrow.gif) no-repeat 0% 50% ;
+	padding-left: 8px;
+}
+
+.cat_small_count { /* Shows number of records in the category. enclosed in a <small> </small> block */
+
+}
+
+.cat_more_link { /* The link to show more categories*/
+	font-weight: bold;
+
+
+}
+
+/*
+categoty table produced by display_table() function
+*/
+TABLE.cat_table {
+	
+	
+}
+
+
+
+
+/*
+Category box on side bar on the front page
+template: category-list-box.php
+*/
+
+.cat_list_box {
+	background-color: #F2F2F2;
+	border-style:solid; 
+	border-color: #C8C8C8; 
+	border-width:1px; 
+	padding: 0px;
+	margin: 0px;
+}
+
+.cat_box_title {
+
+	font-weight: bold; 
+
+}
+
+/*
+###################################################
+template: index-sidebar.php
+
+*/
+
+.index_sidebar {
+
+
+}
+/*
+####################################################
+Resume list
+
+*/
+
+#resumelist, TABLE.resumelist {
+	background-color: #d9d9d9;
+	width: 99%;
+	
+}
+
+
+
+
+#resumelist TD.list_data_cell {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	color: #000000;
+	
+	
+}
+
+#resumelist .today {
+	color: #ff0000;
+	font-weight: bold;
+
+}
+
+#resumelist .days_ago {
+	color: #339900;
+	font-weight: bold;
+}
+
+#resumelist .days_ago2 {
+	color: #C0C0C0;
+	font-weight: bold;
+}
+
+#resumelist TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #EAEAEA;
+	color: #000000;
+	white-space: nowrap;
+
+}
+
+ .resume_list_no_result {
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/*
+###########################################################
+Skill Matrix
+*/
+.skill_matrix_table {
+
+	border-style:solid; 
+	border-color: #C8C8C8; 
+	border-width:1px; 
+	background-color: #d9d9d9;
+	
+
+}
+
+.skill_matrix_header { 
+
+	background-color: #FFFFff;
+	font-weight: bold;
+
+}
+
+.skill_matrix_row { 
+
+	background-color: #FFFFff;
+
+}
+
+
+/*
+Changes the notice box styles, look in functions.php function JB_render_box_top($width=100, $label='') 
+info-box-top.php template 
+*/
+TABLE.info_box {
+	background-color: #ffffff;
+	 margin-bottom:3px;
+	border: 0px;
+
+}
+
+TD.info_box_head { /*header foreground, info-box-top.php template  */
+	background-color: #C8D7E8; /*default #C8D7E8 light blue color*/
+	color: #330066;
+	text-align: center;
+	
+}
+TD.info_box_hed_right, TD.info_box_hed_left { /*top right and top left corners, info-box-top.php template */
+	background-color: #C8D7E8;
+
+}
+TABLE.info_box_body { /*The inner table, info-box-top.php template  */
+	
+	background-color: #ffffff;
+	border-collapse: collapse; 
+	border-style: solid;
+	border-color: #C8D7E8;
+	
+	
+}
+
+/**************
+Request History
+*/
+TABLE.request_history {
+	background-color: #d9d9d9;
+}
+
+TD.request_history_head { /*table heading cells*/
+	background-color: #EAEAEA;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+TD.request_history_data {
+	background-color: #ffffff;
+	font-size: 13px;
+
+}
+
+.request_label_requested {
+	color: #3300CC;
+	font-weight: bold;
+}
+
+.request_label_granted {
+	color: #336600;
+	font-weight: bold;
+}
+
+.request_label_refused {
+	 color: #ff0000;
+	 font-weight: bold;
+
+}
+
+/********************/
+
+.error_msg_label {
+	color: #FF0000;
+	font-weight: bold;
+
+
+}
+
+.ok_msg_label {
+	border: solid; 
+	border-color: #33CC00; 
+	border-width:2px;
+	padding: 5px;
+
+}
+
+
+
+
+
+/*
+...................................
+
+*/
+#advertiser_signup,  TABLE.advertiser_signup_form {
+
+	background-color: #d9d9d9;
+	width: 100%;
+	border: 2px;
+
+
+}
+
+/*****************
+
+Application form (template: application-form.php)
+
+*/
+
+#app_form_table, TABLE.app_form_table {
+
+	background-color:#BEEA9D;
+	width: 100%;
+	border-width: 0px;
+	 
+
+}
+
+.app_form_table  .field_label {
+	background-color:#F0F7F1;
+	width: 150px;
+	border-width: 0px;
+	font-weight: bold;
+}
+
+.app_form_table  .field_data {
+	background-color:#F0F7F1;
+	border-width: 0px;
+	
+}
+
+/*****************
+
+Employer's Email form (template: employer-email-form.php)
+
+*/
+
+#email_form_table, TABLE.email_form_table {
+
+	background-color:#BEEA9D;
+	width: 100%;
+	border-width: 0px;
+	 
+
+}
+
+.email_form_table  .field_label {
+	background-color:#F0F7F1;
+	width: 150px;
+	border-width: 0px;
+	font-weight: bold;
+}
+
+.email_form_table  .field_data {
+	background-color:#F0F7F1;
+	border-width: 0px;
+	
+}
+
+/*****************
+
+Employer's request form (template: employer-request-form.php)
+
+*/
+
+#request_form_table, TABLE.request_form_table {
+
+	background-color:#BEEA9D;
+	width: 100%;
+	border-width: 0px;
+	 
+
+}
+
+.request_form_table  .field_label {
+	background-color:#F0F7F1;
+	width: 150px;
+	border-width: 0px;
+	font-weight: bold;
+}
+
+.request_form_table  .field_data {
+	background-color:#F0F7F1;
+	border-width: 0px;
+	
+}
+
+/*
+
+Navigation pages: <-Previous 1 | 2 | 3 | 4 | 5 Next -> 
+
+*/
+
+.nav_page_links {
+	text-align: center;
+	margin-bottom: 5px;
+	
+}
+
+A.nav_page_link {
+	
+}
+
+.nav_page_cur {
+	font-weight: bold;
+
+
+}
+
+/*
+Showing an invoice 
+*/
+#invoice  {
+
+	background-color: #d9d9d9;
+	width: 300px;
+
+}
+
+#invoice TD.field {
+
+	background-color: #ffffff;
+	font-weight: bold;
+
+}
+
+#invoice TD.value {
+
+	background-color: #ffffff;
+
+}
+
+.confirm_order_button {
+	font-size: 12pt;
+	text-align: center;
+
+}
+
+.application_text { /* Apllication text displayed on employers/apps.php and myjobs/apps.php */
+
+	font-size: 10pt;
+
+}
+
+/* Employers / Candidates payment.php page */
+
+.payment_block {
+	margin-top:50px;
+	margin-bottom:150px;
+
+}
+
+.candidate_content {
+
+	margin:3px;
+	
+}
+
+.employer_content {
+
+	margin:3px;
+	
+}
+

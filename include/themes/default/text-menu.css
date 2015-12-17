@@ -1,0 +1,129 @@
+
+table.tabbed_menu {
+	background-color: #D5D6E1;
+
+}
+
+
+td.activeButton, td.inactiveButton {
+  text-align: center;
+  vertical-align: top;
+  color:#efefef;
+  
+  font-weight: bold;
+ 
+}
+
+
+td.inactiveButton {
+  background-color:#efefef;
+  cursor: pointer;
+}
+
+div.inactive1 {
+  height: 4px;
+  background-color: #FFFF00;
+  background:  url(images/mb_b_ul.gif) no-repeat top left;
+}
+
+div.inactive2 {
+  height: 4px;
+  background: url(images/mb_b_ur.gif) no-repeat top right;
+  padding: 0 4px;
+}
+
+div.inactive3 {
+  border-top: 1px solid #8080FF;
+}
+
+div.inactiveButtonText {
+
+  border-left: 1px solid #8080FF;
+  border-right: 1px solid #8080FF;
+  padding: 0px 1em 2px;
+  color: blue;
+  white-space: nowrap;
+}
+
+div.inactiveButtonText a {
+  text-decoration: none;
+  color: blue;
+}
+
+div.active1 {
+  height: 4px;
+  background: url(images/mb_ul.gif) no-repeat top left;
+}
+
+div.active2 {
+  height: 4px;
+  background: url(images/mb_ur.gif) no-repeat top right;
+  padding: 1px 6px;
+  
+}
+
+div.activeButtonText {
+
+  padding: 0px 1em 2px;
+  color: #fff;
+  white-space: nowrap;
+  
+}
+
+div.activeButtonText a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+td.activeButton {
+  font-weight:bold;
+  background-color:#83A6D1;
+}
+
+
+#subTabs div.subtab2 {
+  height: 4px;
+  background: url(images/mb_ur.gif) no-repeat top right;
+  padding: 1 4px;
+}
+
+#subTabs td {
+  color: #cbe5ff;
+  padding: 4px;
+  background: #83A6D1;
+  white-space: nowrap;
+}
+
+#subTabs span.activeText {
+  font-weight: bold;
+  color: #FFFFFF;
+  display: inline;
+}
+
+#subTabs span.inactiveText {
+  color: blue;
+  margin: 0 1px;
+  display: inline;
+  font-weight: bold;
+}
+
+#subTabs span.inactiveText a {
+  color: #fff;
+}
+
+#subTabs .sub_tab {
+	padding-bottom: 10px;
+}
+
+ .empty_sub_tab {
+
+ color: #cbe5ff;
+  padding: 1px;
+  background: #83A6D1;
+  white-space: nowrap;
+
+
+}

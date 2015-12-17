@@ -1,0 +1,78 @@
+<jamit version="1.0" encoding="utf-8">
+	<jamitKey>٩(͡๏̯͡๏)۶</jamitKey>
+	<jobsFeed>
+		<title></title>
+		<link>http://localhost/JamitJobBoard-3.2.0/</link>
+		<description>China's Job Board for the English Teaching Professional</description>
+		<pubDate>Thu, 14 Aug 2008 19:19:28 +0000</pubDate>
+		<lastBuildDate>Thu, 14 Aug 2008 19:19:28 +0000</lastBuildDate>
+		<generator>HiTeacher custom in-house RSS generator</generator>
+		<managingEditor>adam@jamit.com.au</managingEditor>
+		<webMaster>adam@jamit.com.au</webMaster>
+		<targetNiche>
+			<industry></industry><!-- eg. entertainment -->
+			<function></function><!-- eg. accounting -->
+			<jobs_type></jobs_type><!-- eg. part-time, full-time !-->
+			<skill></skill><!-- eg, SAP, japanese language, etc -->
+			<country></country>
+			<region></region>
+			<lang></lang><!-- eg. EN -->
+		</targetNiche>
+		<job>
+			<command>INSERT</command><!-- eg. INSERT, UPDATE or DELETE !-->
+			<days_to_advertise>30</days_to_advertise>
+			<refID></refID>
+			<guid></guid>
+			<post_mode>premium</post_mode>
+			<application_url></application_url>
+			<pubDate>Thu, 14 Aug 2008 19:19:28 +0000</pubDate>
+			<link></link> 
+			<account>
+				<username>test</username>
+				<password>test</password>
+				<accountEmail>account@jamit.com</accountEmail>
+				<contact>
+					<firstName></firstName>
+					<lastName></lastName>
+					<company></company>
+					<address></address>
+					<place></place><!-- eg. city, cbd, town, suburb, etc-->
+					<region></region><!-- eg. state, province, shire, oblast etc -->
+					<country></country>
+					<tel></tel>
+					<www_url></www_url>
+				</contact>	
+			</account>
+			<title></title>
+			<email></email>
+			<location>
+				<place></place><!-- eg. city, cbd, town, suburb, etc-->
+				<region></region><!-- eg. state, province, shire, oblast etc -->
+				<country></country>
+			</location>
+			<categories>
+				<function></function>
+				<industry></industry>
+				<type></type>
+				<location></location>
+			</categories>
+			<start></start>
+			<duration></duration>
+			<skills></skills>
+			<postalcode></postalcode>
+			<posted_by></posted_by>
+			<salary>
+				<currency></currency>
+				<from></from>
+				<to></to>
+				<benefits></benefits>
+			</salary>
+			<immigration_status></immigration_status>
+			<experience></experience>
+			<description></description>
+			<image_link></image_link>
+		</job>
+		
+	</jobsFeed>
+</jamit>
+

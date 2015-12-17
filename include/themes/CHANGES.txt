@@ -1,0 +1,1074 @@
+3.6.7
+
+Updated the following template files
+
+JBMarkup.php
+JBDynamicFormMarkup.php
+JBMenuMarkup.php
+JBPostListMarkup.php
+
+The most significant change was in JBMarkup.php - re-writing the code 
+which includes HTML extras to use a callback mechanism, similar to the
+'The chain-of-command pattern' as described here 
+http://www.ibm.com/developerworks/library/os-php-designptrns/
+
+
+2.6.6
+
+Corrected HTML in JBSearchFormMarkup.php
+
+2.6.5
+
+Added new files: JBMenuMarkup.php and JBTabbedMenuMarkup. Also adjested
+JBMarkup.php, JBDynamicFormMarkup.php
+
+3.6.1
+
+FILE
+
+js-menu.css
+
+ADD the following CSS to the top:
+
+#bar, #bar2, #bar3 {
+	background: #d0d0d0;
+	margin: 0px;
+	border: 1px solid;
+	border-color: #f0f0f0 #909090 #909090 #f0f0f0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	cursor: default;
+}
+
+Note: The javascript menu now supports up to 3 different menus on the page
+at a time. #bar2 and #bar3 are the two new menus that can be added to the home page
+
+
+3.6.1
+
+FILE
+
+display-post.php
+
+FIND
+
+$DynamicForm->display_form($mode); 
+
+REPLACE WITH
+ 
+$DynamicForm->display_form($mode, $admin);
+
+######################################
+
+To fix a css bug with candidates CSS
+
+FILE 
+
+candidates-header.php
+
+FIND the following identifier:
+
+JB_get_employerscss_url
+
+REPLACE WITH
+
+JB_get_candidatescss_url
+
+#####################################
+
+Note v3.6.0 beta
+Please note: Most of the Markup classes changed significantly, the
+changes are not listed here. Please use a differencing / merging tool
+to merge the changes. The Admin->Main Summary will also prompt you for
+the template changes.
+
+FILE
+
+posting-form.php
+
+FIND and REMOVE:
+
+onmousemove="show_pin(event)"
+
+
+
+
+########################################
+
+FILE
+employer-email-form.php
+
+FIND
+
+
+<input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+
+REPLACE WITH
+
+<input type="hidden" name="resume_id" value="<?php echo jb_escape_sql($resume_id); ?>">    
+
+
+######################################
+
+FILE
+
+employer-signup.php and candidate-signup.php
+
+FIND
+
+<form name="form1" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>?page=signup&amp;form=filled&amp;<?php echo $q_string; ?>" >
+
+REPLACE WITH
+
+<form name="form1" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>?page=signup&amp;form=filled&amp;<?php echo $q_string; ?>" enctype="multipart/form-data">
+
+
+
+
+
+FILE
+
+employer-menu.php
+
+FIND THE CODE
+
+0 => 
+  array (
+    'label' => $label["employer_menu_browse_resumes"],
+    'link' => 'search.php',
+    'image' => '',
+    
+  ),
+
+ADD on a line BELOW
+
+4 => 
+  array (
+    'label' => $label["employer_menu_saved_resumes"],
+    'link' => 'saved.php',
+    'image' => '',
+    
+  ),
+
+
+
+FILE 
+
+candidate-menu.php
+
+
+FIND THIS CODE
+
+if (JB_CANDIDATE_MENU_TYPE=='JS') {
+	require("js_menu.php");
+} elseif (JB_CANDIDATE_MENU_TYPE=='TXT') {
+	require("text_menu.php");
+} else {
+	require("js_menu.php");
+}
+
+REPLACE WITH
+
+if (JB_CANDIDATE_MENU_TYPE=='JS') {
+	require(JB_basedirpath().JB_CANDIDATE_FOLDER."js_menu.php");
+} elseif (JB_CANDIDATE_MENU_TYPE=='TXT') {
+	require(JB_basedirpath().JB_CANDIDATE_FOLDER."/text_menu.php");
+} else {
+	require(JB_basedirpath().JB_CANDIDATE_FOLDER."/js_menu.php");
+}
+
+
+---------------------------
+
+FILE:
+
+employer-menu.php
+
+FIND THIS CODE:
+
+if (JB_EMPLOYER_MENU_TYPE=='JS') {
+	require("js_menu.php");
+} elseif (JB_EMPLOYER_MENU_TYPE=='TXT') {
+	
+	require("text_menu.php");
+} else {
+	require("js_menu.php");
+}
+
+REPLACE WITH:
+
+if (JB_EMPLOYER_MENU_TYPE=='JS') {
+	require(JB_basedirpath().JB_EMPLOYER_FOLDER."js_menu.php");
+} elseif (JB_EMPLOYER_MENU_TYPE=='TXT') {
+	require(JB_basedirpath().JB_EMPLOYER_FOLDER."/text_menu.php");
+} else {
+	require(JB_basedirpath().JB_EMPLOYER_FOLDER."/js_menu.php");
+}
+
+-----------------------------
+
+FILE
+employers-header.php
+(and any other files where the code is present)
+
+FIND:
+
+<script type="text/javascript" src="../wz_dragdrop/wz_dragdrop.js"></script>
+
+
+CHANGE TO:
+
+<script type="text/javascript" src="<?php echo jb_get_WZ_dragdrop_js_src(true); ?>"></script>
+
+
+
+
+FILE
+
+profile-form.php
+resume-form.php
+(and any other files where the code is present)
+
+FIND:
+<script type='text/JavaScript' src='<?php echo JB_BASE_HTTP_PATH."scw/scw_js.php?lang=".$_SESSION['LANG']; ?>'></script>
+
+CHANGE TO
+
+<script type='text/JavaScript' src='<?php echo jb_get_SCW_js_src(); ?>'></script>
+
+
+
+FILE 
+
+JBPostListMarkup.php
+
+ADD CODE:
+
+// Admin / Employer section: Display job post in a pop-up window (post_window.php)
+function get_new_window_js($post_id) {
+
+	return "onclick=\"window.open('post_window.php?post_id=".htmlentities($post_id)."', '', 
+	'toolbar=no,scrollbars=yes,location=no,statusbar=no,menubar=no,resizable=1,width=800,height=500,left = 50,top = 50');return false;\"";
+
+
+}
+
+function get_emp_app_link($href, $text) {
+	return '<a href="apps.php?post_id='.JB_get_raw_template_value('POST_ID', 1).'">'.jb_escape_html($text).'</a>';
+}
+
+
+------------------------------------
+
+
+
+Version 3.5.2
+
+FILE
+
+JBPostListMarkup.php
+
+FIND:
+
+if ((!$column_info['HITS']) ) { // if the list does not contain a 'views' column ?>
+
+CHANGE TO:
+
+if ((!$column_info['HITS']) || ($column_info['HITS']['admin']=='Y')) { // if the list does not contain a 'views' column ?>
+
+
+FIND:
+
+if ((!$column_info['APPLICATIONS']) ) { // if the list does not contain an 'applications' column ?>
+
+CHANGE TO:
+
+if ((!$column_info['APPLICATIONS']) || ($column_info['APPLICATIONS']['admin']=='Y')) { // if the list does not contain an 'applications' column ?>
+
+
+FIND:
+
+if ((!$column_list['HITS']) ) { // if the list does not contain a 'views' column ?>
+	<td ><?php echo JB_get_template_value('HITS', 1); ?></td>
+<?php } ?>
+<?php if ((!$column_list['APPLICATIONS']) ) { // if the list does not contain a 'views' column ?>
+	<td ><?php echo $app_count; ?></td>
+<?php }
+
+
+CHANGE TO
+
+if ((!$column_info['HITS']) || ($column_info['HITS']['admin']=='Y')) { // if the list does not contain a 'views' column ?>
+	<td ><?php echo JB_get_template_value('HITS', 1); ?></td>
+<?php } ?>
+<?php if ((!$column_info['APPLICATIONS']) || ($column_info['APPLICATIONS']['admin']=='Y')) { // if the list does not contain a 'views' column ?>
+	<td ><?php echo $app_count; ?></td>
+<?php }
+
+
+FIND
+
+<td><?php echo JB_get_template_value('HITS', 1); ?></td>
+		</td>
+
+CHANGE TO:
+
+<td><?php echo JB_get_template_value('HITS', 1); ?></td>
+		
+
+-------------------------
+
+
+FILE
+
+email-job-form.php
+
+FIND:
+
+<p><font face="Arial" size="2"><b><?php echo $label['taf_input_f_name'];?></b></td></tr><tr>
+
+ADD THIS CODE BELOW:
+
+<tr>
+	<td><input type="text"  size="40" name="to_name" value="<?php echo jb_escape_html($to_name); ?>"></font></p>
+	<p><font face="Arial" size="2"><b><?php echo $label['taf_input_subject'];?></b>
+	</td>
+</tr>
+
+
+
+-------------------------
+
+
+FILE
+
+JBDynamicFormMarkup.php
+
+FIND:
+?><img alt="" src="<?php echo JB_IMG_HTTP_PATH.'thumbs/'.$prams[$row['field_id']]; ?>" >
+
+CHANGE TO:
+?><img border="0" alt="<?php echo $prams[$row['field_id']] ?>" src="<?php echo JB_get_image_src($prams[$row['field_id']]); ?>" >
+
+--------------------------
+
+FILE
+
+JBDynamicFormMarkup.php
+
+FIND:
+
+?><span class="dynamic_form_image_label"><?php echo $row['FLABEL'];?></span><br><?php
+
+CHANGE TO:
+
+?><span class="dynamic_form_file_label"><?php echo $row['FLABEL'];?></span><br><?php
+
+--------------------------
+
+FILE
+
+JBDynamicFormMarkup.php
+
+FIND:
+
+?><option value="<?php echo $val;?>" <?php echo $selected;?> ><?php echo JB_escape_html($option);?></option>
+
+CHANGE TO:
+
+?><option value="<?php echo jb_escape_html(trim($val));?>" <?php echo $selected;?> ><?php echo ($option);?></option>
+
+--------------------------
+
+
+
+FILE
+
+JBCategoryMarkup.php
+
+FIND
+
+function echo_sub_cat_c_link(&$cat, $anchor) {
+	echo $space;?><a class="cat_subcategory_link" href="<?php JB_cat_url_write($cat['cid'], $cat['n'], $cat['seo']); ?>"><?php echo $anchor;?></a>
+	<?php
+
+}
+
+REPLACE WTH
+
+function echo_sub_cat_c_link(&$cat, $anchor, $space='') {
+		
+	echo $space;?><a class="cat_subcategory_link" href="<?php echo JB_cat_url_write($cat['cid'], $cat['n'], $cat['seo']); ?>"><?php echo $anchor;?></a>
+	<?php
+
+}
+
+
+FIND
+
+?> &nbsp; [<a class="cat_more_link" href="<?php JB_cat_url_write($cat['cid'], $cats[$index]['n'], $cat['seo']);?>"><?php echo $more_label;?></a>]
+<?php
+
+REPLACE WITH
+
+?> &nbsp; [<a class="cat_more_link" href="<?php echo JB_cat_url_write($cat['cid'], $cats[$index]['n'], $cat['seo']);?>"><?php echo $more_label;?></a>]
+<?php
+
+
+
+=======================================================
+
+
+Version 3.5.0
+
+- This version adds new markup classes. The classes group all the
+HTML output in to classes, alowing it to be modified from a central
+place without the need of modyfing the core include files.
+
+
+JBListMarkup.php - For Laying out the columns, used by include/lists.inc.php
+
+JBJobListMarkup.php - Extends JBListLayout, used to render the jobs list
+
+JBResumeListMarkup.php - Extends JBListLayout, used to render the resume list
+
+JBDynamicFormMarkup.php - HTML for laying out the dynamic forms, and HTML
+for rendering the field widgets (eg. checkboxes, selects, radio-buttons, etc)
+
+JBSearchFormMarkup.php - Used for generating HTML for the search form
+
+Other changes:
+- Removed all XML style short tags from the default theme 
+(eg. changed <br/> to <br>)
+
+-------------------------------------------------------------
+
+FILE
+
+resume-form.php
+
+
+FIND
+
+<td colspan="2" class="dynamic_form_value">
+
+		
+	
+	</td>
+	</tr>
+
+REMOVE THE ABOVE LINES
+
+
+
+
+
+
+
+Version 3.4.10
+
+
+FILE
+
+main.css
+
+FIND:
+
+The end of the file
+
+
+ADD
+
+.payment_block {
+	margin-top:50px;
+	margin-bottom:150px;
+
+}
+
+
+
+
+FILE
+
+candidate-login-form.php
+
+FIND:
+
+
+<form name="form1" method="post" action="<?php if ($action=='') { echo JB_BASE_HTTP_PATH.JB_CANDIDATE_FOLDER; ?>login.php<?php } else { echo $action; } ?>" >
+<table align="center"  border="0" cellspacing="0" cellpadding="0">
+
+
+CHANGE TO:
+
+
+<form name="form1" method="post" action="<?php if ($action=='') { echo JB_BASE_HTTP_PATH.JB_CANDIDATE_FOLDER; ?>login.php<?php } else { echo $action; } ?>" >
+<input type="hidden" name="page" value="<?php if ($_REQUEST['page']=='') $_REQUEST['page']=$_SERVER['PHP_SELF']; echo jb_escape_html($_REQUEST['page']); ?>">
+<table align="center"  border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+FILE
+
+employer-login-form.php
+
+FIND:
+
+
+<form name="form1" method="post" target="_top" action="login.php">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+
+CHANGE TO:
+
+
+<form name="form1" method="post" target="_top" action="login.php">
+<input type="hidden" name="page" value="<?php if ($_REQUEST['page']=='') $_REQUEST['page']=$_SERVER['PHP_SELF']; echo jb_escape_html($_REQUEST['page']); ?>">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+
+
+FILE
+
+themes/default/candidates-outside-header.php
+
+ADD 
+
+this between the HEAD tags:
+ 
+<?php JBPLUG_do_callback('can_outside_extra_meta_tags', $A = false); ?>
+ 
+
+FILE
+
+themes/default/employers-outside-header.php
+
+ADD
+
+this between the HEAD tags: 
+ 
+<?php JBPLUG_do_callback('emp_outside_extra_meta_tags', $A = false); ?>
+ 
+ 
+
+
+FILE
+
+include/themes.php
+
+FIND:
+ 
+require(JB_DEFAULT_THEME_PATH.'employers-outside-header.php');
+ }
+ JBPLUG_do_callback('employers_outside_footer_after', $A = false);
+
+ 
+REPLACE WITH
+ 
+require(JB_DEFAULT_THEME_PATH.'employers-outside-header.php');
+ }
+ JBPLUG_do_callback('employers_outside_header_after', $A = false);
+
+
+
+
+
+FILE 
+
+themes/default/main.css
+
+ADD THESE LINES:
+
+#dynamic_form .date_field {
+
+}
+
+
+
+
+
+FILE
+
+themes/default/display-post.php
+
+FIND
+
+$link = $_SERVER['PHP_SELF'];
+
+REPLACE WITH
+
+$link = htmlentities($_SERVER['PHP_SELF']);
+
+
+
+
+
+* Update to all the *footer files: *
+
+>> Open index-footer.php
+ 
+Above </body> line, paste the following code:
+ 
+	<?php JBPLUG_do_callback('index_before_body_end', $A = false);?>
+ 
+>> Open candidates-footer.php
+ 
+Above </body> line, paste the following code:
+ 
+	<?php JBPLUG_do_callback('can_before_body_end', $A = false);?>
+ 
+>> Open candidates-outside-footer.php
+ 
+Above </body> tag, paste the following code:
+ 
+	<?php JBPLUG_do_callback('can_outside_before_body_end', $A = false);?>
+ 
+>> Open employers-footer.php
+ 
+Above the </body> line, paste the following code
+ 
+	<?php JBPLUG_do_callback('emp_before_body_end', $A = false);?>
+ 
+>> Open employers-outside-footer and paste the follwing code before the body tag:
+ 
+	<?php JBPLUG_do_callback('emp_outside_before_body_end', $A = false);?>
+
+
+##################################################################
+
+
+Version 3.4.8
+
+
+FILE
+
+index-employer.php
+
+FIND:
+
+
+?>
+
+<p align="center"><a class="go_back" href="<?php echo htmlentities(JB_get_go_back_link()); ?>"><b><?php echo $label['post_display_goback_list']; ?></b></a><br>
+
+<br>
+
+<?php
+
+
+CHANGE TO:
+
+
+if ($display_mode == 'FULL') {
+	?>
+	<p align="center"><a class="go_back" href="<?php echo htmlentities(JB_get_go_back_link()); ?>"><b><?php echo $label['post_display_goback_list']; ?></b></a><br>
+	<br>
+	<?php
+}
+
+
+##################################################################
+
+Version 3.4.5
+
+
+FILE:
+
+The default template file is include/themes/default/resume-form.php
+
+FIND:
+
+	</form>
+	<?php } ?>
+		
+	</table>
+
+REPLACE WITH:
+
+		
+	<?php } ?>
+		
+	</table>
+
+	<?php if ($mode != 'view') { ?>
+	</form>
+	<?php } ?>
+
+
+Version 3.4.0
+
+==============================================================================
+FILE:
+
+main.css
+
+FIND:
+
+#dynamic_form TD.dynamic_form_field {
+	background-color: #efefef;
+	font-weight: bold;
+	width: 120px;
+	
+
+}
+
+
+REPLACE WITH:
+
+
+#dynamic_form TD.dynamic_form_field {
+	background-color: #efefef;
+	font-weight: bold;
+	width: 120px;
+	white-space: nowrap;
+
+}
+
+
+
+FIND:
+
+#search_form TD.field {
+	background-color: #EDF8FC;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+
+
+REPLACE WITH:
+
+#search_form TD.field {
+	background-color: #EDF8FC;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+
+
+
+FIND:
+
+
+#joblist TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #E9E9E9;
+	color: #000000;
+
+}
+
+
+REPLACE WITH:
+
+#joblist TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #E9E9E9;
+	color: #000000;
+	white-space: nowrap;
+}
+
+
+
+FIND:
+
+#joblist_premium TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #E9E9E9;
+	color: #000000;
+
+}
+
+
+REPLACE WITH:
+
+#joblist_premium TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #E9E9E9;
+	color: #000000;
+	white-space: nowrap;
+
+}
+
+
+FIND:
+
+#resumelist TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #EAEAEA;
+	color: #000000;
+
+}
+
+REPLACE WITH:
+
+#resumelist TD.list_header_cell {
+	font-family: "Arial", sans-serif;
+	
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+	background-color: #EAEAEA;
+	color: #000000;
+	white-space: nowrap;
+
+}
+
+
+==============================================================================
+
+
+FILE:
+
+post-display.php
+
+FIND:
+
+
+echo '<p align="center" style="padding-top:10%;padding-bottom:20%;">'.$label['post_not_found_error']." </p>";
+
+
+REPLACE WITH:
+
+
+	echo '<p align="center" style="padding-top:10%;padding-bottom:20%;">'.$label['post_not_found_error']." </p>";
+	$prams = array();
+} elseif (($prams['approved']=='N') && ($display_mode=='FULL')) {
+
+	echo '<p align="center" style="padding-top:10%;padding-bottom:20%;">'.$label['post_not_approved'].'</p>';
+	$prams = array();
+	
+
+FIND:
+
+
+<p align="center"><a class="go_back" href="<?php echo htmlentities($_SERVER['PHP_SELF']).$query_string;?>"><b><?php echo $label['post_display_goback_list']; ?></b></a><br>
+
+
+
+REPLACE WITH:
+
+if ($display_mode == 'FULL') {
+	?>
+	<p align="center"><a class="go_back" href="<?php echo htmlentities(JB_get_go_back_link()); ?>"><b><?php echo $label['post_display_goback_list']; ?></b></a><br>
+	<br>
+	<?php
+}
+
+
+==============================================================================
+
+
+FILE:
+
+index-employer.php
+
+FIND:
+
+echo JB_get_template_value('PROFILE_COL2', 3); 
+
+CHANGE TO:
+
+echo JB_get_template_value('PROFILE_BNAME', 3);
+
+==============================================================================
+
+
+FILE:
+
+index-employer.php
+
+FIND:
+
+<br><P align="center"> <a href="<?php echo htmlentities($_SERVER['PHP_SELF'])."?".htmlentities("$q_string&offset=$offset");?>"><b><?php echo $label['index_employer_jobs'];?></b></a> -> <b><?php echo $comp_name;?></b></p>
+
+CHANGE TO:
+
+<br><P align="center"> <a href="<?php echo JB_get_go_back_link();?>"><b><?php echo $label['index_employer_jobs'];?></b></a> -> <b><?php echo $comp_name;?></b></p>
+
+
+==============================================================================
+
+
+FILE:
+
+index-category.php
+
+FIND:
+
+<span class="category_name"><?php echo $label['root_category_link']; ?> <?php echo JB_getCatName($_REQUEST['cat']);?></span><br>
+	<span class="category_path"><?php echo getPath($_REQUEST['cat']);?></span>
+
+CHANGE TO:
+
+<span class="category_name"><?php echo $label['root_category_link']; ?> <?php echo JB_getCatName($_REQUEST['cat']);?></span> <br>
+	<span class="category_path"><?php echo JB_getPath($_REQUEST['cat']);?><br>
+	</span>
+	<div>
+
+</div>
+
+
+
+FIND:
+
+<a href="<?php echo JB_BASE_HTTP_PATH; ?>"><?php echo $label['go_to_site_home']; ?></a>
+
+
+CHANGE TO:
+
+<a href="<?php echo JB_BASE_HTTP_PATH; ?>"><?php echo $label['go_to_site_home']; ?></a>
+<?php
+
+if (JB_CAT_RSS_SWITCH=='YES') {
+?>
+	<p>
+
+	<a href="<?php echo JB_BASE_HTTP_PATH."rss.php?cat=".$_REQUEST['cat']; ?>"><img alt="RSS" src="<?php echo JB_THEME_URL.'images/rss_cat.png'?>" border="0" ></a> <?php
+	
+	$label['rss_subscribe'] = str_replace ('%RSS_LINK%', JB_BASE_HTTP_PATH."rss.php?cat=".$_REQUEST['cat'], $label['rss_subscribe']);
+	$label['rss_subscribe'] = str_replace ('%CATEGORY_NAME%', JB_getCatName($_REQUEST['cat']), $label['rss_subscribe']);
+	echo $label['rss_subscribe'];
+	?>
+	</p>
+<?php
+}
+?>
+
+==============================================================================
+
+
+FILE:
+
+employers-header.php
+
+FIND:
+
+<img width="750" height="112" border="0" alt="<?php echo jb_escape_html(JB_SITE_NAME); ?>" src="<?php echo JB_THEME_URL; ?>/images/employers-header.gif"/></a></td>
+
+CHNAGE TO:
+
+<img width="750" height="112" border="0" alt="<?php echo jb_escape_html(JB_SITE_NAME); ?>" src="<?php echo JB_THEME_URL; ?>images/employers-header.gif"/></a></td>
+
+
+
+
+==============================================================================
+
+
+FILE:
+
+index-header.php
+
+FIND:
+
+<a href="index.php">
+
+CHANGE TO:
+
+<a href="<?php echo JB_BASE_HTTP_PATH;?>">
+
+
+==============================================================================
+
+
+FILE:
+
+employer-signup-form.php
+
+
+FIND:
+
+<tr  bgcolor="#E2E2E2"><td colspan="2">Subscription</td>
+
+</tr>
+
+<tr>
+<td width="25%" >Can View Resumes?</td>
+
+
+CHANGE TO:
+
+	<tr  bgcolor="#E2E2E2"><td colspan="2">Subscription </td>
+
+	</tr>
+
+	<?php
+
+	$subscr_row = jb_get_active_subscription_invoice($_REQUEST['user_id']); 
+
+	if ($subscr_row==true) { // echo the manage button
+
+		?>
+
+		<tr>
+		<td width="25%" ></td>
+		<td width="86%">
+			<input type="button" value="Modify Subscription" onclick="window.open('subscr_modify.php?invoice_id=<?php echo $subscr_row['invoice_id'];?>&product_type=S', '', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=600,height=560,left = 50,top = 50');return false;">
+		</td>
+	</tr>
+
+
+		<?php
+
+	} else { // user does not have any active subscription
+
+	?>
+
+FIND:
+
+
+</tr>
+	<tr  bgcolor="#E2E2E2"><td colspan="2">Membership</td>
+
+
+CHANGE TO:
+
+
+</tr>
+	<?php
+
+	} // end if ($subscr_row==false) {
+
+	?>
+	<tr  bgcolor="#E2E2E2"><td colspan="2">Membership</td>
+
+
+
+======================================================
+
+Added new graphic: include/themes/default/images/images/rss_cat.png
+
+Please copy the graphic to your theme's images directory.
+
+#################################################
+

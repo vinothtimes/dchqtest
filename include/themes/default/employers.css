@@ -1,0 +1,81 @@
+.employer_content {
+
+/* top right bottom left */
+	margin: 10px 10px 100px 10px;
+}
+
+/* menu items on the index.php page */
+
+.home_menu_items {
+
+	font-family: verdana;
+
+}
+
+/* welcome title on the index.php page */
+H3.welcome_title {
+
+}
+
+/* welcome text  on the index.php page */
+.welcome_text {
+
+}
+
+/*
+
+Used for diplaying explanation notes above input forms.
+For example, in password.php:
+
+Here you can change your password
+
+Click 'Submit' after you have finished making the changes.
+
+*/
+
+.explanation_note {
+
+
+}
+
+TABLE.order_table {
+
+	background-color: #d9d9d9;
+	width: 100%;
+
+
+}
+
+TD.order_col_head {
+
+	background-color: #E9E9E9;
+	font-weight: bold;
+
+}
+
+TD.order_col_data {
+
+	background-color: #ffffff;
+	
+
+}
+
+TD.order_col_data_small {
+
+	background-color: #ffffff;
+	font-size: 7pt;
+
+}
+
+/*
+
+A request was already made
+
+*/
+
+.request_msg_sent_label {
+	border: solid; 
+	border-color: #3333FF; 
+	border-width:2px
+
+}

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>Welcome to Jamit Job Board</title>
+<link>http://localhost/test/</link>
+<description>Welcome to Jamit Job Board. Please configure me by going to Admin-&gt;Main Config.</description>
+<language>en</language>
+<pubDate>Mon, 20 Jun 2011 06:09:17 +0000</pubDate>
+<lastBuildDate>Mon, 20 Jun 2011 06:09:17 +0000</lastBuildDate>
+<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+<generator>HiTeacher custom in-house RSS generator</generator>
+<managingEditor>test@example.com</managingEditor>
+<webMaster>test@example.com</webMaster>
+<image>
+<link>http://localhost/test/</link>
+<title>http://localhost/test/</title>
+<url>rss_logo.png</url>
+<width></width><height></height></image>
+<item>
+<title>sss</title>
+<link>http://localhost/test/job//sss/2011-05-06/19953</link>
+<description>  this is a test    ...</description>
+<pubDate>2011-May-06</pubDate>
+<guid>http://localhost/test/job//sss/2011-05-06/19953</guid>
+</item>
+<item>
+<title>????? ?? ?????? ??????? ??????? ?????? ??</title>
+<link>http://localhost/test/job///2011-02-20/19927</link>
+<description>  ????? ?? ?????? ??????? ??????? ?????? ?????? ???????? ? ???????   ????? ?? ?????? ??????? ??????? ?????? ?????? ???????? ? ???????   ????? ?? ?????? ??????? ??????? ?????? ?????? ???????? ? ???????   ????? ?? ?????? ??????? ??????? ?????? ?????? ??????......</description>
+<pubDate>2011-Feb-19</pubDate>
+<guid>http://localhost/test/job///2011-02-20/19927</guid>
+</item>
+<item>
+<title>This ?is# a &amp;job to&amp; javascript  test the field blocking system and applications</title>
+<link>http://localhost/test/job//this-isajob-tojavascript-test-the-field-blocking-system-and-applications/2010-09-08/19926</link>
+<description>  £ öt?This ?? ?? ?? TV??? is a test job post to see how the field blcokin sysem works.   Rate: £250   Lets try some HTML code:   [Employer&apos;s Signup Form]...</description>
+<pubDate>2010-Sep-08</pubDate>
+<guid>http://localhost/test/job//this-isajob-tojavascript-test-the-field-blocking-system-and-applications/2010-09-08/19926</guid>
+</item>
+<item>
+<title>Goods In Inspector</title>
+<link>http://localhost/test/job//goods-in-inspector/2010-07-22/19915</link>
+<description>The candidate will support the Goods In Inspection department by checking raw and mechanical materials against engineering drawings and company specifications.   You must have a good understanding of aerospace quality standards.   You will be receiving it......</description>
+<pubDate>2010-Jul-22</pubDate>
+<guid>http://localhost/test/job//goods-in-inspector/2010-07-22/19915</guid>
+</item>
+<item>
+<title>Automotive Systems Integration/Resident Engineers</title>
+<link>http://localhost/test/job//automotive-systems-integration-resident-engineers/2010-07-15/19917</link>
+<description>  I&apos;m working on behalf of a growing organisation who provide project teams into some of the World&apos;s leading organisations in the automotive electrical and electronics sectors. We are looking for Resident Engineers to be involved in a prestigious customer......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//automotive-systems-integration-resident-engineers/2010-07-15/19917</guid>
+</item>
+<item>
+<title>Composite Production Engineer</title>
+<link>http://localhost/test/job//composite-production-engineer/2010-07-15/19916</link>
+<description>This will include maintaining the specifications, Developing TPM and maintenance plans for the equipment, owning the engineering responsibility for the equipment and improving it where possible, working to reduce scrap and variability in the processes, an......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//composite-production-engineer/2010-07-15/19916</guid>
+</item>
+<item>
+<title>AutoCad Design Engineer</title>
+<link>http://localhost/test/job//autocad-design-engineer/2010-07-15/19914</link>
+<description>My client, a Global Engineering firm requires an SC cleared AutoCad Engineer for an immediate start. Essential skills required:  AutoCAD trained and experienced. BS7671 (17th Edition IEE Wiring Regulations) trained and experienced. Able to produce detaile......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//autocad-design-engineer/2010-07-15/19914</guid>
+</item>
+<item>
+<title>Mechanical Design Engineer - Nottingham - East Midlands</title>
+<link>http://localhost/test/job//mechanical-design-engineer-nottingham-east-midlands/2010-07-15/19912</link>
+<description>  Mechanical Design Engineer - Nottingham - Solid Edge - Â£   Fantastic vacancy for a Mechanical Design Engineer based in Nottingham in the East Midlands. This is a rapidly expanding company and a market leader in the field of Waste to Energy Solutions an......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//mechanical-design-engineer-nottingham-east-midlands/2010-07-15/19912</guid>
+</item>
+<item>
+<title>Regional Construction Manager - Mining</title>
+<link>http://localhost/test/job//regional-construction-manager-mining/2010-07-15/19909</link>
+<description>Role: Regional Construction Manager - Mining Location: Brisbane Corporate RoleOur client is a global leading engineering consultancy and project delivery firm. They employ approximately 6500. They work across four broad markets: Buildings and Infrastructu......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//regional-construction-manager-mining/2010-07-15/19909</guid>
+</item>
+<item>
+<title>Reliability Technician (NDT)</title>
+<link>http://localhost/test/job//reliability-technician-ndt/2010-07-15/19908</link>
+<description> Reputable &amp; Well Established Company Exciting Career Opportunity Attractive Remuneration Package Our client is a total solution provider for maximising machine and plant productivity. With more than 100 years experience, their knowledge of rotating machi......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//reliability-technician-ndt/2010-07-15/19908</guid>
+</item>
+<item>
+<title>Test Engineer II</title>
+<link>http://localhost/test/job//test-engineer-ii/2010-07-15/19907</link>
+<description>Primary Function A Test Tools Engineer is responsible for the planning, development, maintenance and support of printer emulator code base and/or test tools base. Additionally, ensures that proper test methodologies and techniques are adequately applied i......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//test-engineer-ii/2010-07-15/19907</guid>
+</item>
+<item>
+<title>Performance Engineer</title>
+<link>http://localhost/test/job//performance-engineer/2010-07-15/19906</link>
+<description>SYSTEM MODELLER/Systems Performance engineerThe Client: leading Aerospace Engine ClientThe Role: 3 Month ContractSalary: negJob purposeMy client is looking for a Systems engineer who develops mathematical models or simulations of engine, control system, s......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//performance-engineer/2010-07-15/19906</guid>
+</item>
+<item>
+<title>CNC Programmer/Manufacturing Engineer</title>
+<link>http://localhost/test/job//cnc-programmer-manufacturing-engineer/2010-07-15/19905</link>
+<description>CNC Programmer/Manufacturing Engineer Â£25,000 to Â£35,000 PRO RATA9 month contractSwindonWe have an immediate requirement for a CNC Programmer/Manufacturing Engineer to work for a very unique organisation in Swindon. The company was established more than......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//cnc-programmer-manufacturing-engineer/2010-07-15/19905</guid>
+</item>
+<item>
+<title>Principal Engineer - Nuclear</title>
+<link>http://localhost/test/job//principal-engineer-nuclear/2010-07-15/19904</link>
+<description>Our client, a major international design and engineering consultancy, has announced and immediate requirement for a Principal engineer with a high level of technical expertise within the nuclear industry.The successful applicant with be acting in a senior......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//principal-engineer-nuclear/2010-07-15/19904</guid>
+</item>
+<item>
+<title>Product Assurance Engineer</title>
+<link>http://localhost/test/job//product-assurance-engineer/2010-07-15/19903</link>
+<description>Product Assurance Engineer is required for earth observation and scientific space projects.Your main duties and responsibilities within this role include, but aren&apos;t limited to the following:- Management of Quality aspects of Major Space Project including......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//product-assurance-engineer/2010-07-15/19903</guid>
+</item>
+<item>
+<title>Head of Professional Services</title>
+<link>http://localhost/test/job//head-of-professional-services/2010-07-15/19902</link>
+<description>This key role for our publicsector client requires someone with a civil engineering background who has ideally worked in a highways department with a Local AuthorityThe post requires a competent engineer probably a accredited through a recognised EC insti......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//head-of-professional-services/2010-07-15/19902</guid>
+</item>
+<item>
+<title>Senior Avionic System Engineer</title>
+<link>http://localhost/test/job//senior-avionic-system-engineer/2010-07-15/19901</link>
+<description>WHD Consulting are currently looking for a Senior Avionic Systems Engineer for our Aerospace client based in Switzerland. This challenging position involves: - Participating in technical feasibility studies - Reviewing the aircraft system architecture inc......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//senior-avionic-system-engineer/2010-07-15/19901</guid>
+</item>
+<item>
+<title>Consultant Mechanical Engineer</title>
+<link>http://localhost/test/job//consultant-mechanical-engineer/2010-07-15/19900</link>
+<description>My client is a successful innovation partner focused on creating value for our clients by transforming new ideas, design and technology into commercial success.Working within multidisciplinary teams on major development projects, you will be responsible f......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//consultant-mechanical-engineer/2010-07-15/19900</guid>
+</item>
+<item>
+<title>Product Assurance Engineer</title>
+<link>http://localhost/test/job//product-assurance-engineer/2010-07-15/19890</link>
+<description>Product Assurance Engineer, Defence, HerefordOur Defence client requires a Product Assurance Engineer to assure products are designed and built to AQAP/ISO9000 quality requirements. The successful candidate will take responsibility for all quality assuran......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//product-assurance-engineer/2010-07-15/19890</guid>
+</item>
+<item>
+<title>Production Engineer</title>
+<link>http://localhost/test/job//production-engineer/2010-07-15/19889</link>
+<description>Production Engineer (Contract)Our client is a world leader in energy management. You will part of a large transformers design and manufacture division team within the organisation. As a production engineer you will be responsible: Execute the production p......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//production-engineer/2010-07-15/19889</guid>
+</item>
+<item>
+<title>NHibernate Developer</title>
+<link>http://localhost/test/job//nhibernate-developer/2010-07-15/19888</link>
+<description>Chief C# NHibernate Developer, Â£325-425 per dayAs NHibernate C# Analyst Programmer you will be working within a C# OO .NET Framework v2.0- 3.5 Agile environment. Starting a 3 month rolling project in February 2010, you&apos;ll be working on a market leading p......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//nhibernate-developer/2010-07-15/19888</guid>
+</item>
+<item>
+<title>Technical Support Engineer - Air Systems</title>
+<link>http://localhost/test/job//technical-support-engineer-air-systems/2010-07-15/19887</link>
+<description>Service and Technical Support Engineer -Suffolk - electro Mechanical Instruments 25000-30000 experience of pneumatics or Air Systems would be very useful! The Technical Support Role. The applicant will be largely office based: You will be the technical re......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//technical-support-engineer-air-systems/2010-07-15/19887</guid>
+</item>
+<item>
+<title>Production Engineer</title>
+<link>http://localhost/test/job//production-engineer/2010-07-15/19886</link>
+<description>Production Engineer (Contract)Our client is a world leader in energy management. You will part of a large transformers design and manufacture division team within the organisation. As a production engineer you will be responsible: Execute the production p......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//production-engineer/2010-07-15/19886</guid>
+</item>
+<item>
+<title>Digital/FPGA Design Engineer</title>
+<link>http://localhost/test/job//digital-fpga-design-engineer/2010-07-15/19885</link>
+<description>Digital/FPGA Design Engineer, West MidlandsOur client is a world leader in energy management. This will be a great opportunity to be part of a global hardware team responsible for delivering electronic designs to provide creative and practical solutions t......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//digital-fpga-design-engineer/2010-07-15/19885</guid>
+</item>
+<item>
+<title>Environmental Test Engineer</title>
+<link>http://localhost/test/job//environmental-test-engineer/2010-07-15/19884</link>
+<description>Role activities: To perform and support environmental test activities. Must be available to support out of hours working to support 24 hour, 7 day per week testing, providing cover at short notice for weekday and weekend out of hours working.Main activiti......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//environmental-test-engineer/2010-07-15/19884</guid>
+</item>
+<item>
+<title>Project Engineers/Photovoltaics</title>
+<link>http://localhost/test/job//project-engineers-photovoltaics/2010-07-15/19883</link>
+<description>Photovoltaic expert - In order to enhance their engineering practice the client is immediately seeking project engineers and technical engineers in the field of photovoltaics. The successful candidate will possess extensive practical experience in the pla......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//project-engineers-photovoltaics/2010-07-15/19883</guid>
+</item>
+<item>
+<title>Strategic Weapon Systems Development Engineer (Graduate Entry)</title>
+<link>http://localhost/test/job//strategic-weapon-systems-development-engineer-graduate-entry/2010-07-15/19882</link>
+<description>Our client is the single contractor providing specialist Waterfront In-Service Support to the Royal Navy&apos;s Trident Strategic Weapon System (SWS). The company plays a supporting role in the operational readiness of the nation&apos;s nuclear deterrent on board t......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//strategic-weapon-systems-development-engineer-graduate-entry/2010-07-15/19882</guid>
+</item>
+<item>
+<title>Electronics Engineer (6 Months) in West Midlands</title>
+<link>http://localhost/test/job//electronics-engineer-6-months-in-west-midlands/2010-07-15/19881</link>
+<description>A key client of mine based in West Midlands is looking for an Electronics engineer. Role:Design of Electronics circuits for Bomb disposal Robots. The candidate will need to be able to work on safety critical design and safety critical circuits. If the can......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//electronics-engineer-6-months-in-west-midlands/2010-07-15/19881</guid>
+</item>
+<item>
+<title>OLE Designers - Australia</title>
+<link>http://localhost/test/job//ole-designers-australia/2010-07-15/19880</link>
+<description>Our client, a major international engineering consultancy, is looking for a number of OLE design engineers for permanent roles in Sydney, Australia.In return for your willingness to relocate to Australia, our client will provide long term career security ......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//ole-designers-australia/2010-07-15/19880</guid>
+</item>
+<item>
+<title>Engineering Director - Electronic Controls</title>
+<link>http://localhost/test/job//engineering-director-electronic-controls/2010-07-15/19879</link>
+<description>Engineering Director - 2 year fixed term contractHamilton Parker International is tier 1 supplier to our client, a large, multi national power and energy management organisation. On behalf of our client, we are looking for an experienced Engineering manag......</description>
+<pubDate>2010-Jul-15</pubDate>
+<guid>http://localhost/test/job//engineering-director-electronic-controls/2010-07-15/19879</guid>
+</item>
+</channel></rss>

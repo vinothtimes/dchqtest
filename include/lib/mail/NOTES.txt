@@ -1,0 +1,14 @@
+edited getmxrr.php
+wrapped around GetMXRR function:
+
+if (!function_exists('GetMXRR')) {
+
+
+}
+
+...since this function is included in PHP since 5.3.0 on Windows!
+
+edited sendmail_message.php
+
+line 192 commented out duplicate line
+//var $delivery_mode=SENDMAIL_DELIVERY_DEFAULT;

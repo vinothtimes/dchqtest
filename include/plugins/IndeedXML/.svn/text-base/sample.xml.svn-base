@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+
+
+
+<response>
+    <query>english</query>
+    <location>us</location>
+    <dupefilter>true</dupefilter>
+
+    <highlight>false</highlight>
+    <totalresults>57570</totalresults>
+    <start>1</start>
+    <end>10</end>
+    <results>
+
+
+
+        <result>
+            <jobtitle>English Instructor</jobtitle>
+            <company>ECPI</company>
+            <city>Raleigh</city>
+            <state>NC</state>
+            <country>US</country>
+
+            <source>ECPI</source>
+            <date>Sun, 08 Feb 2009 11:11:07 GMT</date>
+            <snippet>English Instructor as they prepare for their career... Education: â€ Masterâ€™s or Doctorate degree in English Skills &amp;amp; Abilities: â€ Excellent oral and written... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=6af5492bc085f42e&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+
+            
+            <latitude>35.818836</latitude>
+            <longitude>-78.64459</longitude>
+
+            <jobkey>6af5492bc085f42e</jobkey>
+        </result>
+
+        <result>
+            <jobtitle>Assistant English Language Teacher</jobtitle>
+
+            <company>Heart English School</company>
+            <city>Various cities in Japan</city>
+            <state>CA</state>
+            <country>US</country>
+            <source>Werkboard.com</source>
+            <date>Sat, 21 Feb 2009 00:28:52 GMT</date>
+
+            <snippet>has called for native English speakers to work in... out among other English school companies, who hire teachers just for the &amp;quot;Eikaiwa&amp;quot; or English Conversation... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=0788cf3d58ef5a28&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>0.0</latitude>
+            <longitude>0.0</longitude>
+
+            <jobkey>0788cf3d58ef5a28</jobkey>
+        </result>
+
+        <result>
+            <jobtitle>Instructor - English</jobtitle>
+            <company>Corinthian Colleges</company>
+            <city>Fort Worth</city>
+
+            <state>TX</state>
+            <country>US</country>
+            <source>Corinthian Colleges</source>
+            <date>Fri, 20 Feb 2009 20:10:49 GMT</date>
+            <snippet>to the Academic Dean. 
+
+Requirements... Must have a Master&#039;s Degree in English and have completed at least 18 units of graduate level work in the discipline... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=776072cf08c20a92&amp;indpubnum=1111111111111111</url>
+
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>32.73888</latitude>
+            <longitude>-97.33379</longitude>
+
+            <jobkey>776072cf08c20a92</jobkey>
+        </result>
+
+        <result>
+
+            <jobtitle>English Instructor</jobtitle>
+            <company>ECPI College of Technology</company>
+            <city>Greensboro</city>
+            <state>NC</state>
+            <country>US</country>
+            <source>ECPI College of Technology</source>
+
+            <date>Thu, 19 Feb 2009 22:32:17 GMT</date>
+            <snippet>this job:
+Overview:
+English Instructor
+ECPI College... degree in English or a Master&#039;s degree with a minimum of 18 graduate semester hours in English
+Skills &amp;amp;... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=ae9c542be4a060ad&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>36.07987</latitude>
+
+            <longitude>-79.81941</longitude>
+
+            <jobkey>ae9c542be4a060ad</jobkey>
+        </result>
+
+        <result>
+            <jobtitle>Adjunct Instructor - English</jobtitle>
+            <company>DeVry University</company>
+
+            <city>San Francisco</city>
+            <state>CA</state>
+            <country>US</country>
+            <source>DeVry University</source>
+            <date>Sat, 21 Feb 2009 00:20:13 GMT</date>
+            <snippet>in developmental english, composition, and critical thinking to a diverse student population. Qualifications: A Master’s Degree in English or related field. Ph... </snippet>
+
+            <url>http://www.indeed.com/viewjob?jk=345f838fe8f5612d&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>37.75988</latitude>
+            <longitude>-122.43739</longitude>
+
+            <jobkey>345f838fe8f5612d</jobkey>
+
+        </result>
+
+        <result>
+            <jobtitle>English Instructor</jobtitle>
+            <company>South Texas College</company>
+            <city>McAllen</city>
+            <state>TX</state>
+
+            <country>US</country>
+            <source>InsideHigherEd.com</source>
+            <date>Fri, 20 Feb 2009 14:35:20 GMT</date>
+            <snippet>all 5 parts will be forwarded to the Search Committee 
+ 
+Job Title: Faculty (English Instructor) 
+Department: Liberal Arts and Social Sciences Division 
+Reports... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=82c3f0dbd6ad6cc0&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+
+            
+            <latitude>26.216263</latitude>
+            <longitude>-98.23638</longitude>
+
+            <jobkey>82c3f0dbd6ad6cc0</jobkey>
+        </result>
+
+        <result>
+            <jobtitle>English Teacher</jobtitle>
+
+            <company>Duval County Public Schools</company>
+            <city>Jacksonville</city>
+            <state>FL</state>
+            <country>US</country>
+            <source>Education America Network</source>
+            <date>Thu, 19 Feb 2009 10:46:13 GMT</date>
+
+            <snippet>Public Schools are seeking applications for the following position: Position: English Teacher Location: Northwestern Middle School If you are interested in... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=e7cf3432763e3a86&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>30.319407</latitude>
+            <longitude>-81.659996</longitude>
+
+            <jobkey>e7cf3432763e3a86</jobkey>
+        </result>
+
+        <result>
+            <jobtitle>Teacher, English</jobtitle>
+            <company>DeKalb County School System</company>
+            <city>Decatur</city>
+
+            <state>GA</state>
+            <country>US</country>
+            <source>TopSchoolJobs.org</source>
+            <date>Fri, 20 Feb 2009 08:40:29 GMT</date>
+            <snippet>Teacher, English Qualifying Certification Areas(s): English (6-12) (730/) Location / Responsibility... Unspecified Teaching English/Language Arts Preferred... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=062c5a297dc59b38&amp;indpubnum=1111111111111111</url>
+
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>33.7715</latitude>
+            <longitude>-84.2924</longitude>
+
+            <jobkey>062c5a297dc59b38</jobkey>
+        </result>
+
+        <result>
+
+            <jobtitle>English Instructor</jobtitle>
+            <company>Florida Career College</company>
+            <city>Miami</city>
+            <state>FL</state>
+            <country>US</country>
+            <source>Jobing</source>
+
+            <date>Tue, 17 Feb 2009 06:39:57 GMT</date>
+            <snippet>Minimum of 15 semester credits or 23–24 quarter credits in English required. Experience as an English teacher preferred. High School Diploma required. Master&#039;s... </snippet>
+            <url>http://www.indeed.com/viewjob?jk=65afd6a01b48cd55&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>25.7624</latitude>
+
+            <longitude>-80.3566</longitude>
+
+            <jobkey>65afd6a01b48cd55</jobkey>
+        </result>
+
+        <result>
+            <jobtitle>English Tutor</jobtitle>
+            <company></company>
+
+            <city>Tyler</city>
+            <state>TX</state>
+            <country>US</country>
+            <source>Care.com</source>
+            <date>Fri, 20 Feb 2009 23:52:57 GMT</date>
+            <snippet>recently moved from India. We are currently residing in Tyler, TX. My daughter speaks very little English. I wanted a tutor to teach her conversational English.</snippet>
+
+            <url>http://www.indeed.com/viewjob?jk=bae4d63cda8fdb5e&amp;indpubnum=1111111111111111</url>
+            <onmousedown>indeed_clk(this,'1967');</onmousedown>
+            
+            <latitude>32.2466</latitude>
+            <longitude>-95.3184</longitude>
+
+            <jobkey>bae4d63cda8fdb5e</jobkey>
+
+        </result>
+
+    </results>
+</response>

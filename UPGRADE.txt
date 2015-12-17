@@ -1,0 +1,176 @@
+UPGRADE.txt - This file contains the instructions for upgrading
+See CHANGES.txt for a a log of changes made between versions
+
+
+###############################################################
+
+
+Upgrade to 3.6.x series
+
+If you are upgrading from 3.5.x or older, it is recommended that the upgrade
+is performed on a copy (dev version) of your website instead of the real 
+website. That way, you have more time to test things and there is no need
+to rollback if things go wrong. For more details about this approach, please
+see the following article:
+https://www.jamit.com.au/support/index.php?_m=knowledgebase&_a=viewarticle&kbarticleid=238
+
+Upgrade to 3.6.x notes:
+
+** Updates to the templates will be needed **
+
+The job board will prompt further instructions in Admin for how
+to make the changes to your templates.
+
+** Moved fckeditor/, scw/, overlib/, wz_dragdrop/ **
+These directories were moved form the root directory to include/lib/ 
+This is one of the main reasons why update to the templates is needed.
+
+** New PHP file: upload_files/dl.php **
+Please remember to upload this file. Also, please don't forget
+/lang/lang.php
+
+Please go to Admin->Main Config and click the Save button at least
+once. This will ensure that the config.php is correct.
+
+###############################################################
+
+====================================
+
+UPGRADE From versions 3.6.x to later versions
+
+FILES TO UPLOAD
+
+To upgrade, you can simply re-upload all the files, except the files
+in the 'do not upload list'
+
+This includes the following:
+
+- Files form the main directory (but do not re-upload config.php or rss.xml)
+- include/* and include/themes/default/* (assuming that you have created your
+own custom theme in a separate directory and have not modified any other 
+files there)
+- myjobs/*
+- employers/*
+- payment/*
+- admin/
+- lang/english_default.php and lang/lang.php (but do not 
+ re-upload any of the other language files)
+
+UPGRADE DATABASE
+
+After uploading, log in to Admin and hit the 'Upgrade Database' button
+on the first screen that you see (Admin->Main)
+
+This button will only be visible if upgrades to the database are needed.
+After hitting this button, the system will upgrade the database structure
+for your database, keeping your original data preserved. (Its good practice
+to keep a backup of your database)
+
+QUICK UPLOAD TIP
+
+You only need to upload the changed files. The best way to work out which
+files were changed is to sort the files by date. Your ftp client
+should be able to do this if you click on the 'Filename' column heading.
+
+Then you only upload the files which have a later date than the release
+date of your currently installed version.
+
+On slower connections, this may save you a lot of time.
+
+*FTP CONSOLE*
+
+To save you even more time with FTP-ing the files, we've added an FTP
+uploading tool to the customer's download center here:
+https://www.jamit.com/ipn/ipnm.php
+
+DO NOT UPLOAD LIST:
+
+- don't upload files in the lang/ directory (except english_default.php and
+lang.php which needs to be re-uploaded)
+- don't upload rss.xml
+- don't upload config.php
+
+
+
+NOTES
+
+For history of changes to the templates, see
+include/themes/CHANGES.txt
+
+The default theme is located in include/themes/
+
+Final tip...
+
+Please, remember to BACKUP before the upgrade!
+
+====================================
+
+UPGRADE From version 2.x - 
+
+For convenience, any newer version of the job board will automatically upgrade
+your database if an older version is detected. All your data will be preserved.
+
+However, because version 3 is structurally different from version 2, you would
+need to install the software in a new folder and build your site from the 
+ground up using the new theme system. Here is the overview of the recommended 
+procedure:
+
+1. Install the software in a separate directory which you can easily
+use for development without affecting your real site.
+
+2. Customize a theme for your site. This is done the same way as before
+when the header.php and footer.php were edited, except these files have
+now been moved to the include/themes/default/ directory. 
+See include/themes/README.txt for detailed instructions about how to create 
+a new theme. The simplest themes need to only customize about 3 files (header,
+footer and main.css).
+
+3. Test your new theme. Once it is ready you may change your site 
+over to your new version by replacing the new version files with the old.
+
+Notes
+
+-Your old config.php 2.x is not compatible with the new 3.x version
+You will need to replace all your files including config.php
+
+
+A great tip
+
+To migrate form your old main.css to version 3.x, It is best 
+to use a tool such as WinMerge available form http://www.winmerge.org and it's
+a free download. We really recommend that you become familiar with this tool 
+because it is a huge time-saver and allows you to compare changes visually and 
+merge the changes together with the click of a mouse button (no need to type / 
+copy & paste). 
+
+=========================
+
+Upgrade Services
+
+Please contact us for more details http://www.jamit.com/solution-partners.htm
+
+
+=========================
+
+Question
+
+I do not understand the upgrade process for upgrading from v2 to v3
+Can you give me a quick summary?
+
+Answer
+
+When upgrading to version 3, then version 3 files need to be totally 
+replaced with version 2. 
+
+So we would recommend that you install it in a separate directory first. 
+See the updated installation instructions on our Docs page 
+http://www.jamit.com/docs.htm
+
+For the database settings for v3, just enter your old v2 database settings.
+
+Then you should customize your new v3 job board using the new theme system. 
+See include/themes/README.txt for more info about new theme system and 
+how to create your own theme.
+
+Once you are ready, you delete v2 files and shift v3 to where v2 was. 
+Just remember to update the paths in config.php after shifting it.

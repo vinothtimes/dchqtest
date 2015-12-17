@@ -1,0 +1,59 @@
+A note a about Security
+=======================
+
+All effort was made during development to make the this software
+as safe as possible. Here are the measures that were taken:
+
+- Upload of files: File extensions are checked, only those allowed 
+can be uploaded
+
+- Audit code for all possible RFI attacks and eval() attacks. The rule
+is to never allow user input into require() include() or eval()
+
+- SQL injections - always escape quotes before going to the database. Always
+pad all variables with quotes like 'this' and use JB_escape_sql() to
+properly escape the input.
+
+Note: The job board is written for Magic Quotes to be enabled. If
+Magic Quotes is disabled, it will automatically add slashes as if
+Magic Quotes is enabled. This means that you will need to call
+addslashes() on any data that is not coming from $_REQUEST
+
+- XSS filtering - always remove JavaScript, dangerous HTML, 
+ASCII control characters before it is saved to the database. This includes
+scanning for tricky things such as encoding characters in hex-htmlentities,
+but allowing characters form other languages. The job board's JB_removeEvilTags()
+function is especially designed for this.
+
+- Escape HTML for all data that is outputted, except where
+the outputted data can be trusted and has been filtered properly. Use 
+the jb_escape_html() function when echoing variables
+
+- Scan Outgoing email for header injections
+
+- Check records for ownership before edited changes are saved
+
+- Use " instead of ' in html attributes, eg <input type="text">
+instead of <input type='text'>
+
+
+
+Although these measures were taken, we cannot give you a total guarantee
+that the software is 100% safe as bugs may still exist, although we
+assure you that the software is very close to rock-solid and we can say 
+that we can comfortably sleep at night. We also actively test our software for
+security and monitor the latest security advisories.
+
+Our best advice for security to you would be to:
+
+- Run our software under a VPS or Dedicated server, away from other users
+- Regularly check our website for updates, and upgrade your software 
+frequently
+- Use the latest version of PHP and keep your other server software
+up-to-date
+- Report any suspicious things to us immediately.
+- When adding or modifyng your own code, please ensure to follow the above
+rules.
+- Password protect your admin/ directory using the password protection 
+features in your hosting account.
+- Use themes and plugins only from trusted sources

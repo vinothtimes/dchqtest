@@ -1,0 +1,825 @@
+- added 404 header for posts not found
+
+3.6.12 - 5th Nov 2011
+
+- Added additional checks to the 'Tell a friend' feature to thwart spammers.
+
+To upgrade, only need to upload the following files:
+email_job_window.php
+lang/english_default.php
+admin/main.php
+
+If you cannot upgrade, it's recommended that you disable the 'Tell a friend' 
+feature in Admin->Main Config.
+
+3.6.11 - 7th May 2011
+
+- Fixed adding a new language bug in Admin
+- fixed 'app name' in applications
+- Fixed a problem with preserving the search results when a column is clicked
+to sort. Changed include/classes/JobListAttributes.php - JobListAttributes() 
+and get_nav_query_string() function
+- Fixed Admin->Languages, adding a new language problem of selecting the CKEditor
+
+3.6.10 - 4th Feb 2011
+
+- CKEditor updated to 3.5.1 (include/lib/ckeditor)
+- Admin DOCTYPE changed to standards mode (include/themes/default/JBMarkup.php
+- Fix: include/dynamic_forms.php incorrectly blocked some fields (eg company name)
+
+3.6.9 - 29th Jan 2011
+
+- Fixed: bug with the Google Map field, include/schema_functions.php
+- Fixed: employers/signup.php to be compatible with IE 8
+(employers-outside-footer.php, employers/signup.php templates)
+- Fixed: URL writer deals with '#' characters correctly
+- Blocked fields on applications: Fixed so that fields are correctly un-blocked
+when this option is enabled.
+- Corrected the resume BD link on the applications email
+- Passive mode for FTP
+
+3.6.8 - 17th Nov 2010
+
+- NEW: Google Checkout payment module. This module is released as beta. Please
+report any problems to Jamit Software.
+- Fix to installation routine (admin/install.php and db.php)
+- Fixed a bug with the URL field not displaying
+- Fixed forms with multiple Google Maps / multiple calendar fields
+- Improved XML Exporting function to be more memory efficient
+- Fixed URL writing for the XML Exporting function and RSS feeds
+- jb-get-xml.php supports an 'offset' parameter, for skipping records
+- Fixed rendering of the URL field (JBDynamicFormMarkup.php)
+- Fixed a bug with header tags for categories when URL re-writing is enabled.
+- Eliminated bunch of 'if statements' in JB_echo_index_meta_tags(). Custom
+meta tags are now separately generated for each page, include/themes/pages.php
+- Added new labels to lang/english_default.php
+- Fixed a cache resetting bug when editing codes for the fiels.
+- Fixed a JavaScript bug in employers/post_iframe.php
+
+See include/themes/CHANGES.txt for changes to the templates
+
+
+3.6.7 - 30th Oct 2010
+
+- Fixed a bug with relative path resolution in include/file_functions.php, this fixes
+the Javascript error with 'ckeditor'.
+- Added a set_mode() method to DynamicForm.php class
+- Re-wrote parts of JBMarkup.php template so that script files are included only if
+necessarily.
+
+3.6.6 - 20th October 2010
+
+bug: Resume Alerts / Job Alerts: Anonymous fields, blocked fields and 
+membership fields processing bug fix
+bug: Admin->Main Config: 'Show Category in Posts List headings?' - 'Insert on a 
+seperate line' did not save
+bug: added missing file admin/fix_permissions.php
+bug: corrected HTML for language identifiers 'c_index_manage' and 
+'employer_payment_processing'
+bug: employers/order.php verifies to make sure an order is selected and ensures
+that an order is selected by default
+bug: Search form markup, incorrectly closed tags
+feature: Application email subjects now support template tags from the posting
+form
+bug: Admin->XML Import log, eliminated possible exceeded memory usage
+bug: Admin->Edit Profile, fixed form on error
+feature: Option for a tableless search form layout in Admin->Main Config
+enhancement: Warning about Cron Emulation in Admin
+enhancement: jQuery updated to v1.4.2 from v1.3.2
+enhancement: Updated FCKEditor to CKEditor 3.4, InfoPage still uses the old
+FCK Editor, the plugin will be updated the market.
+feature: Ability to turn off Cron execution via web & password protect it
+enhancement: Improved the feature for redirecting after login, so that the
+user is redirected to the same page with the same "GET" parameters.
+feature removed: Automatic login from a link, because it was too 
+complicated and risky for some situations. If you would like your user to be
+logged in for longer, please see the Extended Session plugin here: 
+http://market.jamit.com/item/7
+
+
+3.6.5 - 12 August 2010
+
+Feature: demo mode
+bug: Fixed TopEmployers, TopViewedJobs and Top_Featured_jobs
+plugins when activated under certain conditions.
+bug: markup in employers/signup.php fixed
+bug: Admin->Edit Config: keep emails forever (0) false error message eliminated
+bug: Employer->Applications, removed slashes before single quotes
+bug: File Cache driver chmod() fix
+bug: RSS logo image document root fix
+bug: Additional php4 compatibility issues fixed
+bug: Saved resumes list if skill matrix was enabled
+bug: More php4 compatibility issues fixed
+bug: Javascript menu did not work if tabbed menu was also enabled
+bug: enable_menu() missing argument
+enhancement: Added more mail types in Admin->List Queue
+enhancement: Ability to template the menus.(JBMenuMarkup.php and
+JBTabbedMenuMarkup.php). This also updated the JBMarkup.php template file.
+
+
+3.6.4 - 22 July 2010
+
+bug: Admin->Suggest Permissions, file owner detection
+bug: default theme - employers-header.php had a duplicate hook; added doctype
+bug: application attachment error: get_line_break fix
+
+
+3.6.3 - 22 July 2010
+
+bug: Fixed a problem with resume alerts
+bug: Fixed a problem with job alerts
+bug: Fixed a problem with job posting
+bug: Fixed a problem with loading jquery when javascript menu is enabled
+
+3.6.2 - 21 July 2010
+
+feature: Google Map
+feature: Admin->Main Config, Remove accents option for mod_rewrite URLs
+bug: problems with mod_rewrite URLs with &
+bug: PHP 4 syntax compatibility
+bug: Memcached driver fix
+bug: Category cache not updated
+bug: Admin->XML Import, incorrect status displayed when 'Map Fields' was saved
+bug: Translation tool fix, now forces a merge of all themes & plugins
+bug: Date Calendar field was not blank when no date was entered 
+bug: Job description displayed twice
+bug: Admin->Subscriptions / Admin->Memberships, incorrect duration (days)
+bug: Employer->Job Post Manager, delete post
+bug: Solved the javascript menu resize/positioning bug
+bug: Input filtering for search fix
+bug: Candidates->Saved Posts, deleted x posts message
+>>>bug: Candidates->Job Alerts, remove find button
+enhancement: Javascript menu uses jquery event to initialize
+enhancement: added 'onload_functions' to JBMarkup::append_extra_markup()
+enhancement: Admin->Main Config HTML update 
+enhancement: Admin->Edit Categories, do not link a category if there are no
+child categories under it
+enhancement: Job board checks to see if exec() is enabled before using it
+enhancement: New language strings in english_default.php
+enhancement: Height of posting form can be configured in Admin->Main Config
+enhancement: XML Import, reworded error message for better details
+enhancement: Javascript menu can support 3 different ids (see 
+include/themes/CHANGES.txt)
+enhancement: Improved routine for calling plugins - eliminated use of eval()
+enhancement: email_job_window.php - default body background is white
+
+3.6.1 - 12th June, 2010
+
+- bug: Input filter warning
+- bug: Admin->Edit Config: label for email controls
+- bug: Click on a resume, there is not link to go back to the résumé db
+- bug: When the resume is saved, the link is not working
+- bug: Cron does not work
+- bug: Post a job (from Admin)
+- bug: Date on posting forms
+- bug: Admin->List Resumes, delete button
+- bug: Resume Alerts, the resume list appears double
+- bug: Can't delete request of employer
+- bug: Can't delete employer account
+- bug: Click on resume in Admin List Resumes
+- bug: Form with uploaded file & error when submitting caused the uploaded 
+file to disappear
+- bug: Delete request to view resume: employer can make a new request, after 
+the original was deleted by job seeker
+- bug: If cron emulation enabled, Mail Monitor timeout can cause the cron
+to exit prematurely without error.
+- bug: Employers->Post Manager, expire post: update category counters
+- bug: Employers->Edit Job, tabbed menu showing 'post a new job' page active
+- bug: Job post URL with parentheses
+- bug: language merging did not merge english_default from plugins & themes
+- bug: display-post.php template - $admin arg in display_form function call
+- bug: candidates-header.php template incorrect CSS URL (see include/themes/CHANGES.txt)
+- bug:  argument 4 for JB_generate_category_option_list() 
+- bug: Numeric / Integer fields on dynamic form displayed null values incorrectly
+- bug: File Uploads - directory provisioning fix for Windows
+
+Other changes
+- Plugin initialize: Plugins are now loaded when a call to JB_init() is made 
+- update to the default css - added class for 'find' button 
+
+
+This version also coincides with the updates to the following plugins:
+see: http://market.jamit.com/
+
+
+15th March 2010 - version 3.6.0 beta
+
+Major Changes include: A new upload file managment system; A new
+driver-based cache system, major improvements to the themes system. Also
+a long list of other fixes and additions.
+
+- Moved the following directories to include/lib/
+fckeditor/, mail/, scw/, wz_dragdrop/, overlib/, menu/
+- Moved HTML from core files to template files. New template files are
+JBMarkup.php, JBAppMarkup.php, JBAppListMarkup.php, JBIframeListMarkup.php
+Also, made significant changes all existing Markup classes.
+- Admin section theme is always set to default - this ensures that 
+customization of themes will less likely break the Admin 
+- Dropped support for Image Magick in favor of the GD Library
+- File Uploads: To download a file, added a mime-type header so that
+the file opens as an attachment
+- Added new variables to the newsletter
+- XML Sitemaps: Change so it exports only the job categories
+- Email: Attached filenames converted to UTF-8
+- Performance: Replaced the old cache system with a new driver-based cache 
+system. The new cache system has drivers for Files, Memcached, eAccelerator and
+APC caching systems. Enhanced all parts of the code to make use of the new 
+cache. 
+- Employer's Resume List: Ability to save resumes, added a 'Saved Resumes' page
+to the Employer's section (see include/themes/CHANGES.txt for details
+about how to update your employer-menu.php template)
+- Admin->List Resumes: Ability to approve / disapprove multiple resumes at a time
+- Job Post Manager: Multiple jobs can be selected and deleted at once
+- Search Form: When File, Image or YouTube fields are placed on the search
+form then a checkbox will provide a way to return records which have these
+fields filled
+- Admin->Subscription Plans: Cannot delete a subscription plan which has active
+subscription(s).
+- Admin->Membership Plans: Cannot delete a membership plan which has active
+membership(s).
+- Resume Alerts: Added %RESUME_DB_LINK% so that employers can click on a
+resume link directly.
+- Fixed a bug in the URL Shortening feature
+- Authorize.net: Re-worked the configuration options. If you are using 
+Authorize.net, please see Admin->Payment modules for the new settings!
+- FCKEditor update to v2.6.5
+- Admin->XML Help: Updated
+- Admin->Memberships: Fixed pop-up when clicking on invoice
+- Admin->List Post: Fixed when clicking on some buttons and no posts were selected
+- SSL Advice adjusted
+- XML Imports: Check the header to verify encoding is supported & other 
+minor fixes
+- XML Imports: fixed 'ignore & replace with' setting
+- XML Imports: Added option to deduct credits and approval status can be read
+form the XML file
+- XML Imports: Improved XML header detection and support for ISO-8859-1 and
+US-ASCII encodings (if encoding is specified in the header, otherwise UTF-8 
+is assumed)
+- Currencies: Fixed to just return amount if 'To Currency' and 'From Amount' 
+are equal.
+- Admin: Removed tabs form Edit Config, Edit Categories, Edit Codes, and others
+- Admin->Edit Categories: Added little folder icons next to category names, 
+added a link for sub-categories.
+- Removed include/email.inc.php
+- Mail Monitor: Option to delete email from inbox older than x days
+- NOCHEX: Fix order completion bug
+- Code Re-organization: New JBDynamicForm.php and JBDynamicSearchForm.php
+classes, eliminating some global variables. New classes/ folder, Dynamic
+Forms are now 
+- Admin->Languages: Does not let the user to disable all languages, ensures at
+least 1 language is kept default
+- Subscriptions: Deduct credits fix when subscription was enabled
+- XML Export: Attributes now support variables such as %RECORD_ID% 
+and %USER_ID%
+- Admin->Main Config: Option for sending a copy of the signup email to Admin
+- Admin->List Candidates: Non-approved candidates are on a separate list
+- Admin->List Queue: Fixed 'Resend' link
+- PayPal Module: Fix problem with cURL
+- Renamed JB_xss_scrub() to JB_scrub_input()
+- Min password length for employers and candidates set to 6 chars
+- Fix bug in appurl_iframe.php when 'login in to apply' was set to NO
+- PayPal: added option for manually completion of subscription payments
+- Better <TITLE> tag for jobs list & job search result
+- Admin->Main Config: Option for ignoring membership only fields when post_mode
+is premium
+- Admin->Post Manager: Ability to expire post(s) early, also undo expire
+- More strict input filtering
+
+May 1st, 2009, version 3.5.3
+
+- Subscription Expire: Can view blocked set to 'N' fix
+- Invoice: JB_reverse_package_invoice() modified SQL query
+- post_not_approved_cause added to lang/english_default.php()
+- corrected argument for get_raw_data_value()
+- corrected admin/payment.php
+- Adjusted admin/install.php by adding a workaround for an old PHP bug
+- Automatically truncate CHAR and VARCHAR fields (jb_fit_to_db_size())
+- PayPal: Auto Re-billing for subscriptions is now optional
+- Employer's list: Clicking on number of posts link was broken and
+fixed the results page to make sure it returns all the results.
+- Employer's list: Ability to search non-validated employers
+- Approving Jobs: Update the date when approving a post
+- Fix multiple select for Google Chrome
+- File Upload Field: Resume blocking fix
+- Skill Matrix Field: Resume blocking fix
+- Youtube Field: Does not show if no video embedded, when viewing
+- Employers: Fix to display the 'buy_p_posts_msg' label
+- 2Checkout: Parameters for payment button updated
+- Application URL Redirect: Also works for candidates who are not logged in
+- XML Export: Fixed Zlib compression problem on some systems
+- Fix date format for list_iframe.php
+- Fix date format for job alerts and resume alerts
+- Timezone: Set the internal timezone to GMT in include/functions.php
+- Added new hooks for plugins
+- added a jb_finalize_post_updates(). The purpose of this function is to
+update the post count cache & category counts after updating/deleting/adding
+posts.
+- CCAvenue payment module fix
+- Admin->Main Config: Added a new option ">Block fields on the employer's 
+Application list?"
+
+
+Thursday, 12th March 2009. Version 3.5.2
+
+
+- Authorize.net: added case for unknown x_response_code numbers 
+- HTML fix with premium job list
+- Employers: Views column not showing on Job Post Manager for some job boards
+- Fixed thumbnails not being displayed on list (update to JBListMarkup.php
+functions.php and lists.inc.php)
+- Fixed categories drop down (update to JBDynamicFormsMarkup)
+- Languages: Added c_alert_submit_button label
+- Added 'Subscribe to RSS' link to myjobs/browse.php
+- Post List: 'Do not repeat premium posts' setting fix in posts.inc.php
+- Fix bug in Admin->XML Schema CSV import
+- XML Import: Added warning for bug http://bugs.php.net/bug.php?id=45996
+- Adjusted the email '@ sign replace with image' feature
+- Categories: Fixed link for sub-categories when in compact setting
+- Categories: Fixed first page link which was going back to the home page
+- Email Job Window: Added 'Your fiend's name' and auto pre-fill email & name
+- Email Job Window: Supports SEO Friendly URLs
+- JB_escape_html($str): Ensure that $str is cast to string type
+- Admin->Main Config: SMTP Port did not save
+- Non Latin language bug: Fix to chnage so that & are not escaped.
+
+
+Feb 23, 2009, version 3.5.1
+
+- Automatically delete entries older than 7 days from payment log
+- SMTP outgoing port bug fix
+- HTML Editor html filtering bug fix
+- Added strip_tags() to outgoing text emails to strip all HTML
+- Memberships: Fixed bug with SQL query in include/invoice_functions.php
+- Admin->Membership Report: Corrected bad arguments for substr()
+- Admin->Membership Orders: Corrected SQL for searching by order id
+- Resumes: Inserted new resume Email alert fix
+- Themes: Php4 compatibility fix
+- Upgrade: MySQL 4 compatibility fix
+- XML Import: 'Deduct posting credits' feature added
+- XML Export: UTF-8 Fix for CDATA
+- Merging language files: Current language is re-loaded after merge is complete
+
+
+Feb 17, 2009, version 3.5.0
+
+- XML Import tool
+- Added a 'canonical' tag to the headers
+- Renamed display_resume_form(..) to JB_display_resume_form(..)
+- Renamed update_post_category_count() to JB_update_post_category_count()
+- Templates: Removed HTML from dynamic_forms.php and 
+lists.inc.php for all Form Fields, Resumes List, Jobs List and Search Fields. 
+The new default template classes are: 
+JBListMarkup.php, JBJobListMarkup.php, JBResumeListMarkup.php, 
+JBDynamicFormMarkup.php, JBCategoryMarkup, and JBSearchFormMarkup.php
+This change gives significant increases in the possibilities for 
+theme customizations.
+- Offset parameter cannot be negative, strict validation for order_by parameter
+- Corrected bad arguments for imagepng() function
+- Fixed bug in rss.php
+- Added tax option for Check/Money Order. Improved tax option for Bank method.
+- Fix a bug in include/jb_write_config_vars()
+- Fixed Opera bug when deleting saved jobs
+- Main Config: Do not repeat showing premium posts on the non-premium list
+- Applications: Fixed a bug with automatic pre-fill of previous application
+- Email Sending: SMTP now supports SSL connections
+- URL Field: Fixed some URLs not getting converted to links
+- Numerous other fixes and minor adjustments
+
+January 05, 2009 - version 3.4.12
+
+- Adjust mod rewrite rules to be compatible with InfoPages
+- Fixed a bug include/url_writing_functions.php
+- Admin->Codes: trim() used when bulk importing
+- Job List: Added rel="nofollow" to column header links when listing jobs
+- Job List: cat parameter appended correctly to column header links
+- Text Fields: Autocomplete set to ON
+- Fixed bug in admin/get_csv.php
+- Added new label to english_default.php
+- Fixed paging links when search form with a Checkbox or Date is used
+- XML Export: Ability to import/export XML Schema structure settings 
+to CSV files.
+- XML Export: Adjusted default schema for indeed.com, see article for details:
+- Changed 'insert_post_data' hook to pass $post_id
+- Javascript fix in email_job_window.php
+
+December 05, 2008 - version 3.4.11
+
+- Plugins initialize config in parent class JB_Plugins
+- email_job_window.php : Fixed encoding meta tag in <HEAD>
+- change error type in JB_gd_resize_image()
+- Updated JB_decimal_to_hex() so that it pads the hex values with zeros
+- Improved date validation for Date Calendar field
+- Unclosed DIV tag in myjobs/text_menu.php
+- Dates in emails localized
+- New languge phrases in employers/post_iframe.php
+- Email address validation for employers
+- Please note: There was security advisory found by an unidentified assailant. 
+This problem was incorrectly reported for the wrong versions; this 
+problem was confirmed to be fixed since 3.4.1. 
+There is no known exploit available for this advisory. It simply prints an
+error to the screen. If you do not want to upgrade, then a workaround for this 
+problem is to go to Admin->Main Config and change the 'Use a custom error 
+handler' setting to 'YES' so that SQL errors are not displayed to the screen.
+
+October 27, 2008 - version 3.4.10
+
+- Added LIMIT to SQL queries for listing jobs
+- Added LIMIT to SQL queries for managing jobs in Admin
+- Added LIMIT to SQL query for listing outgoing email
+- Added LIMIT to SQL query for listing & searching resumes, employers and job seekers
+- Fixed bug with search_set in JB_update_post_category_counters()
+- Fixed bug in JB_update_post_category_counters()
+- New strings in lang/english_default.php
+- Added an 'implode' option to XML Exports
+- Support for new options in InfoPages plugin
+- Fixed error in admin/candidateslist.php
+- Mail Monitor: Delete log entries older than 30 days
+- Admin->Employers: No longer lists suspended accounts on main list
+- Added plugin callback for myjobs/forget.php
+- Default to activated language for Job/Resume alerts if no language set
+- Changed myjobs/search & myjobs/browse.php to use require_once for profiles
+- Replace & with &amp; in query strings output from JobListAttributes()
+- Admin/install.php should now require less memory
+- Admin->Employers: Fixed page nav links when listing non-validated employers.
+- Memberships: Candidate cannot apply to a job if membership not paid
+- Employers: include/invoice_functions.php, fix to 'Product Type' label
+- Fixed potential problem with bad word filter
+- JB_merge_language_files to use absolute paths
+
+September 14, 2008 - version 3.4.9
+
+
+- Sitemaps: Fixed job link with mod_rewrite enabled
+- Sitemaps: Fixed category link with mod_rewrite disabled
+- Category URLs: Adjusted the code for better non-English URL compatibility
+- Added .docx to default allowed extensions list
+- XML Exports: Ability to export accounts with job posts
+- XML Exports: Added option to export files & image as a URL
+- XML Exports: Added new constants to the XML Export tool (Define Schemas)
+- XML Exports: Increased maximum depth allowed in the XML document tree
+- Blocked fields: fixed a bug when the fields on the application were blocked even
+though subscriptions were enabled.
+- Removed imagemagick settings from install.php
+- Application: Added 'Go to my Account' and 'Edit my resume' links after an
+application is made
+- MySQL 5 strict mode fix to JB_grant_request()
+- Slight adjustment to JB_xss_scrub()
+- Categories: Fixed sorting category OPTION list for language translations
+- Categories: Introduced a 'has_child' field for better performance
+- Categories: Improved JB_get_search_set() function
+- Improved SQL query generation for JB_search_category_tree_for_posts
+- Fixed problem with searching posts by categories
+- Admin->Edit Categories: HTML fix
+- Fix HTML in myjobs/text_menu.php and employers/text_menu.php
+- Fix HTML in employers/logout.txt
+- Adjusted JB_utf8_to_html($data) to be consistent with latin1 charset
+
+August 21, 2008 - version 3.4.8
+
+
+- New Email Template: Request granted notification sent to the employer
+when a candidate granted access to their resume
+- Themes: You can have a custom theme for each language! 
+- Youtube url processing fix
+- Updated lang/spanish.php
+- Resume email alerts: Exclude not approved resumes
+- Admin->List Resumes: Added 'New Resumes Waiting' tab if resume approval enabled
+- Admim->Candidates: Fix suspend candidate
+- Added strip_tags() when displaying the TITLE meta tag.
+- Admin->Codes: Ability to choose how Radio, Check-boxes, Selects and Multiple 
+Select fields are ordered
+- Security audit of all code.
+- Admin Login: Locks Admin's login for 1 minute if password was wrong 3x
+- Added new translation strings to the english_default.php file
+
+June 13, 2008 - version 3.4.7
+
+- Fixed a bug in the sorting logic when listing jobs by a particular column
+- fixed 'membership only' fields bug in include/dynamic_forms.php
+- updated fckeditor/fckconig.php
+- Fixed [More..] link for compact categories if SEO links are enabled
+- Updated installation script
+- Ability to bulk-add category names
+- Ability to bulk-add option codes using CSV
+- Radio, Check-boxes, Selects and Multiple Select fields are ordered by
+description
+
+May 25, 2008 - version 3.4.6
+
+- List jobs by category: Added a new label 'listing x jobs posting to this
+category within y days'
+- Subscriptions: Fix to payment by check and bank, so that
+the subscription can be advanced before the payment is received.
+- Admin->Existing Subscriptions: Removed 'Cancel', 'Complete' etc buttons
+- Fix rounding problem in include/currency_functions.php
+- Adjusted include/mail_manager.php
+- 'Previous' link when listing jobs posted by employer goes back to the
+employer's profile page instead of the homepage.
+- Admin->Subscription Orders: fix subscription search by ID
+
+May 15, 2008 - version 3.4.5
+
+- Added new translation strings to the english_default.php file
+- Help pages editable from Admin
+- Authorize.net payment return fix
+- translation tool, source code formatting fix
+- Themes: resume-form.php template file updated. For details see 
+include/themes/changes/
+- Admin: 'Suspend candidate account' fix so that resumes get suspended as well
+- Employers Post before viewing resumes for free: allow accounts to be 
+activated automatically
+- Added encoding-type to the header of employers/email_iframe.php
+- Translation of Status in employers/memberships
+- SSL support fix for Windows servers
+- Application history in employers/ and myjobs/ fix for compatibility with some
+languages
+- Ability to purge applications from the Admin
+
+
+Apr 17, 2008 - version 3.4.4
+
+- Updated the WYSIWYG HTML editor to the latest version (FCKEditor 2.6)
+- Fixed 'Applications' and 'Hits' columns which did not appear for some
+configurations
+- A Category tree is displayed if the resume form has Category type fields
+- Mod rewrite URL bug fixed (page1 link, when viewing jobs posted by employer)
+
+
+Apr 16, 2008 - version 3.4.3
+
+- Fixed a bug which caused the RSS feeds to break after approving jobs from
+the Admin.
+
+- Fixed a problem with config.php
+
+Apr 15, 2008 - version 3.4.2
+
+- Anonymous fields and Blocked fileds bug fixed.
+
+
+Apr 09, 2008 - version 3.4.1
+
+- Link to employer for 'Posted By', if it is as a column in the Job List
+- Fix a bug when moving fields up / down when editing a form
+- Fix rss.php giving error when a job was approved
+- Fix a bug when clicking on a date column name
+- Fix bug when saving a date field on the defualt resume form
+- PayPal IPN module: Ability to use cURL & a proxy server for server-server 
+communications with paypal if fsockopen() is disabled.
+- Suspended Employer account cannot log in when all accounts are automatically
+activated by default
+- Adjusted mod_rewrite rules suggested in Admin, moved category rule to the top
+- Fixed minor errors reported in the error log
+- Added new currencies to paypal
+
+Apr 03, 2008 - version 3.4.0
+
+CHANGES
+
+New features:
+
+- Search Engine friendly URLs: Mod_rewrite support for job posts, employer 
+profiles & job list pages (Apache HTTP Server is required for this feature)
+- XML Sitemaps
+- Added a Statistics page to the Admin
+- RSS feeds for each category (Enable in Main Config)
+- New Email template: Employer to Candidate
+
+Other Changes:
+
+- Fixed XML & RSS UTF-8 encoding problem for PHP 4
+- MySQL 5 strict mode SQL compatibility
+- Subscriptions: posting fix
+- Fixed First Name & Last Name tags in Email Templates
+- FCKEditor updated to version 2.5.1
+- Email Queue: Ability to list all emails sent by a specific user
+- PayPal Subscriptions: Transaction amount reporting fix
+- Fixed days elapsed shown on resume list
+- Change to default/display-post.php so that un-approved posts cannot be
+viewed by candidates
+- Change to default/display-post.php 'Go back to the Job List' link
+and improved 'Go Back' link for the resume database
+- Non Latin-1 character support for category Mod-Rewrite URLs
+- https:// allowed in application URL
+- Removed Flixn field type. Read: http://flixn.com/notice.html
+- PHP & SQL errors can be logged to file & viewed from the Admin
+- Tax rate added to the Bank Module
+- Numerous other fixes
+
+==========================
+Themes - Template Changes
+
+For a details about the changes to the theme template files,
+please see include/themes/CHANGES.txt
+===========================
+
+
+
+Feb 04, 2008 - version 3.3.1
+
+- Posts: Approved status is preserved when Admin edited a post. 
+- Fix: URL shortening system updated to only shorten URLs over 70 chars
+- Fix: rss.php workaround for invalid characters
+- Fix: Currency functions rounding problem
+- Some improvements to the installation
+- Other small fixes
+
+January 05, 2008 - version 3.3.0
+
+- New Feature: Added the ability to modify active & expired subscriptions
+- New Feature: Added the ability to modify active & expired memberships
+- New Feature: Automated URL Shortening system for outgoing email
+- Categories: Fixed 'More...' link on categories when Mod_rewrite is enabled
+- Adjusted mod_rewrite feature for categories
+- Admin: Edit Skill Matrix
+- Admin: translation tool: extended session time
+- Admin: Email Queue - dates show as local date
+- Fix all spelling issues
+
+November 29, 2007 - version 3.2.2 - A bug fix release with no new features
+
+- Force merging of english_default.php files when Main Config is Saved
+- Fix translation tool not including strings from custom theme
+- Custom error logging option in the Admin
+- Skill matrix fix when sending resume alert emails
+- Fixed a bug with the cron emulation, introduced in version 3.2.1
+- Updated fckeditor/fckeditor.php file
+- Other small fixes
+
+November 13 version 3.2.1 - A bug fix release with no new features
+
+- memberships: unpaid membership logout fix
+- Category admin: link fix when mod-rewrite is enabled
+- Added new language strings to lang/english_default.php
+- Added Custom title to the Admin section
+- Added is_required_mark class to default main.css file
+- Fix to alert email when a new order is placed (to Admin).
+- Adjustment to fckeditor/fckconfig.php due to a problem on some servers
+- Changed some relative paths to be absolute paths so that the software is
+compatible with more servers
+
+October 18 version 3.2.0
+
+
+- New Feature: Resume Subscription - Avility to set a resume views quota
+- New Feature: Resume Subscription - Ability to give free posts every month
+- Tell A Friend fixes
+- Passwords with ' characters fix
+- Applications date inconsistency
+- cosmetic fixes to html source code
+- File size shown in KB instead of bytes
+- Flixin video delete bug fix
+- Updates to the language files, inluding fix 'advertister' typo
+- Applications: Automatically split application text to lines
+- Categories: If a category does not accept records, the job
+board will display an error message and ask user to select another
+caregory.
+- New hooks to support the phpBB login plugin and other related plugins
+to be released in the future.
+- Upgrade check is only performed if the version number is out of sync
+- Safari compatibility fixes and other interface fixes with changes to
+the following default theme templates: 
+	display-post.php
+	employer-request-form.php
+	resume-form.php
+	posting-form.php
+	employer-signup-form.php
+	employers-header.php
+	candidates-header.php
+
+- Added new style classes to the bottom of main.css in themes/default/
+- Fix to Database Tools in the Admin
+
+17 September 2007 version 3.1.1
+
+- Relative path to require config.php in cron/cron.php
+- Fix: Check payment module (employer subscriptions)
+- Added meaningful messages if the database is not installed or there is
+a problem with the settings.
+- Fix TITLE tag when listing jobs by employer and then viewing a post.
+- Re-worded some labels in Main Configuration to avoid possible confusion
+
+01 September 2007 version 3.1.0
+
+- New Feature: Advertisers can choose how the candidate should apply to a post.
+- New Feature: Approve / Disapprove / Delete job postings by email
+- New Feature: Approve / Disapprove / Delete resumes by email
+- Added 5 new email templates.
+- Fixed "Request" button not showing if "Limit request sending - 
+Subscribed Employers only" is checked
+- Upgraded FCKeditor to the latest version
+- fixed the Re-Post bug in 3.0.5
+- Added a warning if language file cannot be written
+- Fixed problem when JB_SITE_NAME uses quotes in config.php
+- Fixed problem with email-job-window in themes.php
+- Fixed Plugin settings reset bug
+- Raised memory limit in admin/edit_config.php
+- Fixed 'Enable multiple languages for employers' setting in the Admin
+- Fixed JB_template_resume_form() function in include/themes.php
+- Adjusted resume days calculation
+- Fixed Resume Alerts
+- Candidates: Fix to the 'Browse Jobs' page
+- Enhancements to Transaction / Order pages in the Admin
+
+This version has some changes to the posting-form.php and display-post.php
+templates located in include/themes/default/ directory.
+
+
+07 August 2007 - version 3.0.5
+
+- login functions: $row hook fix (this fixes a potential problem
+with plugins where the reference to $row was not passed in correctly)
+- Fixed 'This post is expired' message in themes/default/display-post for
+premium posts
+- `expired` column loaded for posts, resumes, candidates
+- Reverted back to an IFRAME based posting form because of problems with
+the map feature
+- Removed map image settings form Main Config, these images are now a part
+of the theme.
+
+17 July 2007 - version 3.0.4
+
+- Subscription / Membership bug fix (update payment/paypalIPN.php and 
+include/invoice_functions.php)
+- Added lang/english_default.php to themes
+
+
+15 July 2007 - version 3.0.3
+
+
+- Added template for email-job-form.php, email_job_window.php
+- XML Feed Fix: Sql query error, Encoding of XML entities fix
+- Added a new email-job-form.php template 'email a job to a friend' feature.
+- Added a new employers-forget-pass-form.php template.
+- Added a new candidates-forget-pass-form.php template.
+- Form Editor Fix: Label not saved when adding a new field
+- Candidate Delete Fix: resumes are deleted with candidate
+- Transactions: Refund membership fix
+- Add / Edit categories: Cache update fix
+- Employer Subscriptions: Credit advance status check fix
+- Employer Section: 
+	* Added employers.css to the default theme
+	* Moved many of the hard-coded styles to CSS (eg. removal of <font> tags
+	* Added <div class='employer_content'> to each page
+	* Applied CSS styles to the 'change password' form
+	* Applied CSS styles to the 'Choose Language' form
+	* Moved English text form profile page to Language files
+	* Account details change - validation
+- Candidates Section
+	* Added candidates.css to the default theme
+  Moved many of the hard-coded styles to CSS (eg. removal of <font> tags
+	* Added <div class='employer_content'> to each page
+	* Applied CSS styles to the 'change password' form
+	* Applied CSS styles to the 'Choose Language' form
+	* Moved English text form profile page to Language files
+	* Account details change - validation
+
+
+
+05 July 2007 - version 3.0.2
+
+- Fixed: job post title in the <head></head> tags
+- permissions problem fix for some servers
+- myjobs/login_functions - incorrect login label fix
+- error when disabling a language fix
+- Candidate delete updated
+- Employer delete updated
+- Fixed: SITE_NAME string not substituted in  New Job Post Email
+notification ('From name')
+
+
+26 June 2007 - version 3.0.1
+
+Only minor updates to some files in the admin/ and include/ directories.
+To get a list of the files, please sort the directories by date. 
+
+- XML Feed Fix: Only Approved posts are exported
+- Adding a new field error in posting form editor
+- Removed the membership check during Install.
+- CustomField module removed form default config.
+- Small fix to the upgrade script
+- Stats plugin fix
+- Skill matrix fix
+
+20 June 2007 - version 3.0.0
+
+Includes changes from Jamit Job Board 2.9.10
+
+New Features in version 3:
+
+- Theme System
+- Plug-in System
+- Check / Money Order and Bank payment methods 'credit in advance' feature
+
+- Internal Changes to the code: 
+ * Prefixed all function names with JB_
+ * Prefixed all constant names with JB_
+ * Renamed signup.advertiser.inc.php to employers.inc.php
+ * Renamed signup.candidate.inc.php to candidates.inc.php
+ * Renamed advertisers/ directory to employers/ (anti-adblocker)
+ * Moved all remaining HTML based styles to the CSS file
+ * Edited some text in the English language files for better clarity
+ * Consistency to the login functions for both employers and candidates
+ * Removed Header and Footer form the Main Config, removed header.php
+ and footer.php files from the system
+ * Moved CSS files and image files to the theme directories
